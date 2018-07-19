@@ -1,0 +1,604 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"els",
+				"else"
+			],
+			[
+				"o",
+				"other"
+			],
+			[
+				"c",
+				"check"
+			],
+			[
+				"ski",
+				"skill"
+			],
+			[
+				"sk",
+				"skill"
+			],
+			[
+				"ch",
+				"chk"
+			],
+			[
+				"for",
+				"foreach\tforeach …"
+			],
+			[
+				"loc",
+				"location"
+			],
+			[
+				"my",
+				"mysql_error"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"se",
+				"select\tTag"
+			],
+			[
+				"mess",
+				"message"
+			],
+			[
+				"l",
+				"link\tTag"
+			],
+			[
+				"re",
+				"required\tAttr"
+			],
+			[
+				"f",
+				"file"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"sessio",
+				"session_start"
+			],
+			[
+				"conta",
+				"w3-container"
+			],
+			[
+				"p",
+				"password"
+			],
+			[
+				"B",
+				"BLUE"
+			],
+			[
+				"S",
+				"SloganD"
+			],
+			[
+				"F",
+				"FONT\tTag"
+			],
+			[
+				"mar",
+				"margin-left"
+			],
+			[
+				"ali",
+				"align-items"
+			],
+			[
+				"cou",
+				"counter"
+			],
+			[
+				"te",
+				"test1"
+			],
+			[
+				"Stat",
+				"status"
+			],
+			[
+				"St",
+				"Status"
+			],
+			[
+				"ti",
+				"Time"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"h",
+				"height"
+			],
+			[
+				"mysq",
+				"mysql_error"
+			],
+			[
+				"pa",
+				"pass"
+			],
+			[
+				"mysql",
+				"mysql_query"
+			],
+			[
+				"mysql_",
+				"mysql_error"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/wamp/www/Ecell/addmem.php",
+			"settings":
+			{
+				"buffer_size": 890,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/Ecell/login.php",
+			"settings":
+			{
+				"buffer_size": 1074,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "dash.php",
+			"settings":
+			{
+				"buffer_size": 455,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/C/wamp/www/Ecell/mail.php",
+			"settings":
+			{
+				"buffer_size": 832,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/wamp/www/Project/index.php",
+		"/C/wamp/www/Ecell/logout.php",
+		"/C/wamp/www/Project/registration.php",
+		"/C/wamp/www/Project/Sign_in.php",
+		"/C/wamp/www/DB/login.php",
+		"/C/wamp/www/Ecell/mail.php",
+		"/C/wamp/www/Ecell/contactus.html",
+		"/C/wamp/www/Ecell/sessioncheck.php",
+		"/C/wamp/www/Ecell/config.php",
+		"/C/wamp/www/Sample/mail.php",
+		"/C/wamp/www/Aries-art gallery/contact.php",
+		"/C/wamp/www/Aries-art gallery/contacts.php",
+		"/C/wamp/www/Aries-art gallery/js/jquery.js",
+		"/C/wamp/www/Aries-art gallery/index.php",
+		"/C/wamp/www/Ecell/form.html",
+		"/C/wamp/www/Project/config.php",
+		"/C/wamp/www/Project/session_check.php",
+		"/C/wamp/www/Project/logout.php",
+		"/C/wamp/www/Practice/assets/css/main.css",
+		"/C/wamp/www/Practice/css/main.css",
+		"/C/wamp/www/Practice/js/SmoothScroll.js",
+		"/C/wamp/www/Practice/js/util.js",
+		"/C/wamp/www/Practice/js/main.js",
+		"/C/wamp/www/Practice/js/jquery.min.js",
+		"/C/wamp/www/Practice/ieee.html",
+		"/C/wamp/www/Practice/js/skel.min.js",
+		"/C/wamp/www/Practice/js/particles.min.js",
+		"/C/wamp/www/Practice/js/jquery.scrollex.min.js",
+		"/C/wamp/www/Practice/Form Validate.html",
+		"/C/wamp/www/Html codes/popup.html",
+		"/C/wamp/www/mywork/style.css",
+		"/C/wamp/www/mywork/index.html",
+		"/C/wamp/www/trekkingclub/scripts/script.js",
+		"/C/wamp/www/trekkingclub/scripts/poll.js",
+		"/C/wamp/www/index.html",
+		"/C/wamp/www/mywork/portfolio_template.html",
+		"/C/wamp/www/mywork/cv_template.html",
+		"/C/wamp/www/mywork/template.html",
+		"/C/wamp/www/mywork/ecommerce_template.html",
+		"/C/wamp/www/Practice/staticvar.php",
+		"/C/Program Files/Sublime Text 3/show_password.html",
+		"/C/Program Files/Sublime Text 3/multistep_form.html",
+		"/C/Program Files/Sublime Text 3/password_validation.html",
+		"/C/Program Files/Sublime Text 3/modal_login_form.html",
+		"/C/Program Files/Sublime Text 3/social_media_logo.html",
+		"/C/Program Files/Sublime Text 3/lightbox_image.html",
+		"/C/Program Files/Sublime Text 3/gmaps.html",
+		"/C/Program Files/Sublime Text 3/countdown.html",
+		"/C/Program Files/Sublime Text 3/contactus.html",
+		"/C/Program Files/Sublime Text 3/toggle_hide_and_show.html",
+		"/C/Program Files/Sublime Text 3/profile_card.html",
+		"/C/Program Files/Sublime Text 3/contact_card.html",
+		"/C/Program Files/Sublime Text 3/overlay.html",
+		"/C/Program Files/Sublime Text 3/star_ratin.html",
+		"/C/Program Files/Sublime Text 3/popup.html",
+		"/C/Program Files/Sublime Text 3/button_group.html",
+		"/C/Program Files/Sublime Text 3/pagination.html",
+		"/C/Program Files/Sublime Text 3/responsive_mega_menu.html",
+		"/C/Program Files/Sublime Text 3/dropdown_navbar.html",
+		"/C/Program Files/Sublime Text 3/click_dropdown.html",
+		"/C/Program Files/Sublime Text 3/hover_dropdown.html",
+		"/C/Program Files/Sublime Text 3/sticky_navigation.html",
+		"/C/Program Files/Sublime Text 3/slidedown_bar_on_scroll.html",
+		"/C/Program Files/Sublime Text 3/bottom_border_navlink.html",
+		"/C/Program Files/Sublime Text 3/responsive_bottom_navbar.html",
+		"/C/Program Files/Sublime Text 3/hoverable_sidenav_btn.html",
+		"/C/Program Files/Sublime Text 3/sidenav_push.html",
+		"/C/Program Files/Sublime Text 3/animated_sidenav.html",
+		"/C/Program Files/Sublime Text 3/animated_sidenav2.html",
+		"/C/Program Files/Sublime Text 3/responsive_search_bar.html",
+		"/C/Program Files/Sublime Text 3/fixed_sidebars.html",
+		"/C/Program Files/Sublime Text 3/fixed_sidebars2.html",
+		"/C/Program Files/Sublime Text 3/top_navigation_menu.html",
+		"/C/Program Files/Sublime Text 3/responsive_navigation_bar.html",
+		"/C/Program Files/Sublime Text 3/full_page_tabs.html",
+		"/C/Program Files/Sublime Text 3/tab_header.html",
+		"/C/Program Files/Sublime Text 3/vertical_tabs.html",
+		"/C/Program Files/Sublime Text 3/tabs.html",
+		"/C/Program Files/Sublime Text 3/accordian.html",
+		"/C/wamp/www/Practice/menu_icon.html",
+		"/C/wamp/www/Practice/menu_icon2.html",
+		"/C/wamp/www/Practice/icon_bar2.html",
+		"/C/wamp/www/Practice/icon_bar.html",
+		"/C/wamp/www/Sample/update.php",
+		"/C/wamp/www/Sample/next.php",
+		"/C/wamp/www/Sample/profile.php",
+		"/C/wamp/www/Sample/index.php",
+		"/C/wamp/www/Sample/paypal_integration_php/paypal_success.php",
+		"/C/wamp/www/Sample/connection.php",
+		"/C/wamp/www/sign-up-login-form/update.php",
+		"/C/wamp/www/sign-up-login-form/signin.php",
+		"/C/wamp/www/sign-up-login-form/session_check.php",
+		"/C/wamp/www/sign-up-login-form/register.php",
+		"/C/wamp/www/sign-up-login-form/profile.php",
+		"/C/wamp/www/sign-up-login-form/payment.php",
+		"/C/wamp/www/sign-up-login-form/next.php",
+		"/C/wamp/www/sign-up-login-form/mail.php",
+		"/C/wamp/www/sign-up-login-form/logout.php",
+		"/C/wamp/www/sign-up-login-form/index.php",
+		"/C/wamp/www/sign-up-login-form/config.php",
+		"/C/wamp/www/sign-up-login-form/mai",
+		"/C/wamp/www/sign-up-login-form/picture_upload.php",
+		"/C/wamp/www/fileuploading/index.php",
+		"/C/wamp/www/sign-up-login-form/index2.php",
+		"/C/wamp/www/aries-art gallery/contact.php",
+		"/C/wamp/www/aries-art gallery/index.php",
+		"/D/sign-up-login-form/index.html",
+		"/D/sign-up-login-form/index.php",
+		"/C/wamp/www/GitHub/Online-Clinic-System/index.php",
+		"/C/wamp/www/GitHub/Online-Clinic-System/delete1.php",
+		"/C/wamp/www/Project/Sign in.php",
+		"/C/Users/piyus.PIYUSHH/Desktop/Shimla.html",
+		"/C/wamp/www/Database/delete.php",
+		"/C/wamp/www/Database/index.php",
+		"/C/wamp/www/Database/edit.php",
+		"/C/wamp/www/tatti/login.php",
+		"/C/wamp/www/Database/edit_code.php",
+		"/C/wamp/www/tatti/tetris.php",
+		"/C/wamp/www/tatti/update.php",
+		"/C/wamp/www/Project/edit_code.php",
+		"/C/wamp/www/Project/stat.php",
+		"/C/wamp/www/Project/upload.php",
+		"/C/wamp/www/Project/view profile.php",
+		"/C/wamp/www/Project/edit profile.php",
+		"/C/wamp/www/Project/appointments.php",
+		"/C/wamp/www/Project/Register.php",
+		"/C/wamp/www/Project/update.php",
+		"/C/wamp/www/Project/footer.php"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"ent_intrest",
+			"password",
+			"email",
+			"contact",
+			"post",
+			"paypal_link",
+			"Sign up",
+			"contact",
+			"post",
+			"avatar",
+			"PHP",
+			"$id",
+			"min",
+			"score"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/wamp/www/Ecell/addmem.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								669,
+								669
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/C/wamp/www/Ecell/login.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1074,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								555,
+								555
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "dash.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 455,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								447,
+								447
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/C/wamp/www/Ecell/mail.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								531,
+								531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\wamp\\www\\Project\\index.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 125.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
