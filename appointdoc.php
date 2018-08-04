@@ -32,7 +32,7 @@ else
 		?>
 	<script>
 		alert ("Appointment set Unsucessful RETRY!");
-		window.location.href = "Index.php";
+		window.location.href = "index.php";
 	</script>
 <?php
 	}
