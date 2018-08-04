@@ -2,28 +2,19 @@
 session_start();
 include('session_check.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
-    ====================================================-->
-
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>SpA Pathcare : View Profile</title>
-
+      <title>SpA Pathcare : View Profile</title>
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
@@ -34,15 +25,12 @@ include('session_check.php');
     <link id="switcher" href="css/themes/orange-theme.css" rel="stylesheet">    
     <!-- Slick slider css file -->
     <link href="css/slick.css" rel="stylesheet"> 
-
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
-   
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
     <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,12 +44,10 @@ include('session_check.php');
       <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
-
-        <!--=========== BEGIN HEADER SECTION ================-->
+    <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
       <div class="menu_area">
@@ -75,13 +61,11 @@ include('session_check.php');
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-
               <!-- LOGO -->              
               <!-- TEXT BASED LOGO -->
               <a class="navbar-brand" href="index.php"><i class="fa fa-heartbeat"></i>SPA <span>Pathcare</span></a>              
               <!-- IMG BASED LOGO  -->
-              <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->     
-                     
+              <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->         
             </div>
             <!--/.nav-collapse -->
             <?php include ('menu.php') ?>
@@ -112,7 +96,6 @@ include('session_check.php');
       </div>      
     </section>
     <!--=========== BEGAIN Doctors SECTION ================-->
-    
      <section id="meetDoctors">
       <div class="container">
         <div class="row">
@@ -124,74 +107,64 @@ include('session_check.php');
                 <div class="line"></div>
               </div>
               <div class="modal-body">
-                      <div class="appointment-area">
-                        <form class="appointment-form" action="edit profile.php" method="post">
-                          <div class="row">
-                          <div class="single-testimonial1" style="width: 550px">
-                      <div class="testimonial-img">
-                        <img src="<?php echo $_SESSION['log']['Dp'] ?>">
-                      </div>
-                      <div class="testimonial-cotent">
-                        <p class="testimonial-parg">To Upload your Profile Picture go to Update Profile</p>
+                <div class="appointment-area">
+                  <form class="appointment-form" action="editprofile.php" method="post">
+                    <div class="row">
+                      <div class="single-testimonial1" style="width: 550px">
+                        <div class="testimonial-img">
+                          <img src="<?php echo $_SESSION['log']['Dp'] ?>">
+                        </div>
+                        <div class="testimonial-cotent">
+                          <p class="testimonial-parg">To Upload your Profile Picture go to Update Profile</p>
+                        </div>
                       </div>
                     </div>
-							</div>
-                           <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your name <span class="required">*</span>
-                              </label>
-                              <input type="text" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Name'] ?>" readonly>
-                            </div>
-                          <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your Email <span class="required">*</span>
-                              </label>
-                              <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Email'] ?>" readonly>  
-                            </div>
-							</div>
-                        <div class="row">
-                          <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your DOB <span class="required">*</span>
-                              </label>
-                              <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Dob'] ?>" readonly>  
-                            </div>
-                          <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your Gender <span class="required">*</span>
-                              </label>
-                              <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Gender'] ?>" readonly>  
-                            </div>
-							</div>
-                         <div class="row">
-                          <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your Address <span class="required">*</span>
-                              </label>
-                              <input type="text" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Address'] ?>" readonly>  
-                            </div>
-                          <div class="col-md-6 col-sm-6">
-                              <label class="control-label">Your Phone <span class="required">*</span>
-                              </label>
-                              <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" readonly>  
-                            </div>         
-                          </div>                          
-                         <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update Profile</span></button>
-                        </form>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                        <label class="control-label">Your name <span class="required">*</span></label>
+                        <input type="text" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Name'] ?>" readonly>
                       </div>
-                    </div> 
+                      <div class="col-md-6 col-sm-6">
+                        <label class="control-label">Your Email <span class="required">*</span></label>
+                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Email'] ?>" readonly>  
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                        <label class="control-label">Your DOB <span class="required">*</span></label>
+                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Dob'] ?>" readonly>  
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                        <label class="control-label">Your Gender <span class="required">*</span></label>
+                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Gender'] ?>" readonly>  
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 col-sm-6">
+                        <label class="control-label">Your Address <span class="required">*</span></label>
+                        <input type="text" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Address'] ?>" readonly>  
+                      </div>
+                      <div class="col-md-6 col-sm-6">
+                        <label class="control-label">Your Phone <span class="required">*</span></label>
+                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" readonly>  
+                      </div>         
+                    </div>                          
+                    <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update Profile</span></button>
+                  </form>
+                </div>
+              </div> 
             </div>
           </div>
         </div>
       </div>
     </section>
-    
     <!--=========== End Doctors SECTION ================-->
-
     <!--=========== BEGAIN Counter SECTION ================-->
     <?php include('counter.php') ?>
     <!--=========== End Counter SECTION ================-->
-
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
     <!--=========== End Footer SECTION ================-->
-
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
@@ -209,9 +182,7 @@ include('session_check.php');
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>    
     <script src="js/photoswipe-gallery.js"></script>
-
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-     
   </body>
 </html>

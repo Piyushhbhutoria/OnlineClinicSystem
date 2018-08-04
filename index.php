@@ -132,7 +132,6 @@ session_start();
       </div><!-- /top-slider -->
     </section>
     <!--=========== END SLIDER SECTION ================-->
-
     <!--=========== BEGIN Top Feature SECTION ================-->
     <?php 
     if(isset($_SESSION['log'])=="" or $_SESSION['log1']=="client")
@@ -216,14 +215,9 @@ session_start();
                                   </label>
                                   <?php $sql=mysqli_query($con,"SELECT * FROM test"); ?>
                                   <select class="wp-form-control wpcf7-select" name="test" required>
-                                  <?php
-                                  while($row=mysqli_fetch_array($sql))
-                                  {
-                                  ?>
+                                  <?php while($row=mysqli_fetch_array($sql)) { ?>
                                     <option val="<?php echo $row['test_name']; ?>"><?php echo $row['test_name'];  ?></option>
-                                  <?php
-                                  }
-                                  ?>
+                                  <?php } ?>
                                   </select> 
                                 </div>
                               </div>                              
@@ -254,14 +248,9 @@ session_start();
                                   </label>
                                   <?php	$sql1=mysqli_query($con,"SELECT * FROM doctor"); ?>
                                   <select class="wp-form-control wpcf7-select" name="docname" required>
-                                  <?php
-                                  while($row1=mysqli_fetch_array($sql1))
-                                  {
-                                  ?>
+                                  <?php while($row1=mysqli_fetch_array($sql1)) { ?>
                                     <option val="<?php echo $row1['Name'] ?>"><?php echo $row1['Name'] ?></option>
-                                    <?php
-                                  }
-                                  ?>
+                                  <?php } ?>
                                   </select> 
                                 </div>
                               </div>                              
