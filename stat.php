@@ -1,7 +1,7 @@
-<?php include('config.php') ?>
-<?php session_start() ?>
-<?php include('session_check.php') ?>
-
+<?php 
+include('config.php');
+include('session_check.php') 
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,15 +9,12 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>SPA Pathcare : Home</title>
-
+      <title>SPA Pathcare : Home</title>
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
@@ -31,15 +28,12 @@
     <!-- Photo Swipe Image Gallery -->     
     <link rel="stylesheet prefetch" href="css/photoswipe.css">
     <link rel="stylesheet prefetch" href="css/default-skin.css">    
-
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
-   
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
     <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,17 +42,14 @@
     <![endif]--> 
   </head>
   <body>  
-    
     <!-- BEGAIN PRELOADER -->
     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
-
     <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
@@ -80,7 +71,6 @@
               <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->                    
             </div>
             <!--/.nav-collapse -->           
-            
             <?php include ('menu.php') ?>
           </div>     
         </nav>  
@@ -109,7 +99,6 @@
       </div>      
     </section>
 
-
    <section id="topFeature">
       <div class="row" style="margin-left: 25%;">
         <div class="col-lg-4 col-md-4">
@@ -118,24 +107,19 @@
               <span class="fa fa-flask"></span>
               <h3>Test Name</h3>
               <ul class="opening-table">
-                <li>&nbsp;
-                </li>
+                  <li>&nbsp;</li>
                 <?php 
-          $sql=mysqli_query($con,"SELECT * FROM test");
-          while($row=mysqli_fetch_array($sql))
-            {
-              ?>
-                <li>
-                  <?php echo $row['test_name']; ?>
-                </li>
-                <?php
-              }
-              ?>
+                $sql=mysqli_query($con,"SELECT * FROM test");
+                while($row=mysqli_fetch_array($sql)) {
+                ?>
+                  <li><?php echo $row['test_name']; ?></li>
+                  <?php
+                }
+                ?>
               </ul>    
-              </div>
             </div>
           </div>
-        
+        </div>
         <div class="col-lg-4 col-md-4">
           <div class="row">
             <div class="single-top-feature opening-hours">
@@ -143,37 +127,30 @@
               <h3>No. of Appointments</h3>
               <ul class="opening-table">
                 <?php 
-          $sql=mysqli_query($con,"SELECT * FROM test");
-          while($row=mysqli_fetch_array($sql))
-            {
-              $c=0;
-              $test=$row['test_name'];
-              $sql1=mysqli_query($con,"SELECT * FROM test_appointment");
-              while($row1=mysqli_fetch_array($sql1))
-              {
-                $test1=$row1['Test_name'];
-                if($test==$test1)
-                  $c=$c+1;
-              }
-          ?>
-                <li>
-                  <?php echo $c; ?>
-                </li>
-                <?php
-              }
-              ?>
+                $sql=mysqli_query($con,"SELECT * FROM test");
+                while($row=mysqli_fetch_array($sql)) {
+                  $c=0;
+                  $test=$row['test_name'];
+                  $sql1=mysqli_query($con,"SELECT * FROM test_appointment");
+                  while($row1=mysqli_fetch_array($sql1)) {
+                    $test1=$row1['Test_name'];
+                    if($test==$test1)
+                      $c=$c+1;
+                  }
+                  ?>
+                  <li><?php echo $c; ?></li>
+                  <?php
+                }
+                ?>
               </ul>              
             </div>
           </div>
         </div>
       </div>
     </section>
-
-   
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
-  <!--=========== End Footer SECTION ================-->
-
+    <!--=========== End Footer SECTION ================-->
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
@@ -187,9 +164,7 @@
     <!-- Doctors hover effect -->
     <script src="js/snap.svg-min.js"></script>
     <script src="js/hovers.js"></script>
-    
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-     
   </body>
 </html>

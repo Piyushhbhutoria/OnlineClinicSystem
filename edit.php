@@ -20,8 +20,6 @@
 		</tr>
 	</form>
 </table>
-
-
 <?php
 	if (isset($_POST['btn'])) {
 		$testname = $_POST['testname'];
@@ -33,7 +31,9 @@
 				alert ("Updated Sucessfully");
 				window.location.href = "update.php";
 			</script>
-		<?php } else { ?>
+		<?php 
+		} else { 
+		?>
 			<script>
 				alert ("Update Unsucessful");
 				window.location.href = "update.php";

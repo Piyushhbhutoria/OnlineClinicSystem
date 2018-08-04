@@ -1,25 +1,16 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
-    ====================================================-->
-
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>SpA Pathcare : About Us</title>
-
+      <title>SpA Pathcare : About Us</title>
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
@@ -30,15 +21,12 @@
     <link id="switcher" href="css/themes/orange-theme.css" rel="stylesheet">    
     <!-- Slick slider css file -->
     <link href="css/slick.css" rel="stylesheet"> 
-
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
-   
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
     <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -52,12 +40,10 @@
       <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
-
-        <!--=========== BEGIN HEADER SECTION ================-->
+    <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
       <div class="menu_area">
@@ -71,13 +57,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-
               <!-- LOGO -->              
               <!-- TEXT BASED LOGO -->
               <a class="navbar-brand" href="index.php"><i class="fa fa-heartbeat"></i>SpA <span>Pathcare</span></a>              
               <!-- IMG BASED LOGO  -->
-              <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->     
-                     
+              <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->       
             </div>
             <!--/.nav-collapse -->
             <?php include ('menu.php')?>
@@ -110,15 +94,12 @@
     <!--=========== BEGAIN Doctors SECTION ================-->
     <?php include('meet_our_doc.php') ?>
     <!--=========== End Doctors SECTION ================-->
-
     <!--=========== BEGAIN Counter SECTION ================-->
     <?php include('counter.php') ?>
     <!--=========== End Counter SECTION ================-->
-
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
     <!--=========== End Footer SECTION ================-->
-
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
@@ -136,9 +117,7 @@
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>    
     <script src="js/photoswipe-gallery.js"></script>
-
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-     
   </body>
 </html>

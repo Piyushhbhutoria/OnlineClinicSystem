@@ -1,7 +1,4 @@
-<?php 
- include('config.php');
-session_start(); 
-?>
+<?php include('config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,14 +7,11 @@ session_start();
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <title>SPA Pathcare : Home</title>
-
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
@@ -31,15 +25,12 @@ session_start();
     <!-- Photo Swipe Image Gallery -->     
     <link rel="stylesheet prefetch" href="css/photoswipe.css">
     <link rel="stylesheet prefetch" href="css/default-skin.css">    
-
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
-   
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
     <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -48,17 +39,14 @@ session_start();
     <![endif]--> 
   </head>
   <body>  
-    
     <!-- BEGAIN PRELOADER -->
     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
-
     <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
@@ -80,7 +68,6 @@ session_start();
               <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->                    
             </div>
             <!--/.nav-collapse -->           
-            
             <?php include ('menu.php') ?>
           </div>     
         </nav>  
@@ -109,7 +96,7 @@ session_start();
       </div>      
     </section>
    
-   <section id="topFeature" style="margin-left: 21%">
+    <section id="topFeature" style="margin-left: 21%">
       <div class="row">
         <div class="col-lg-4 col-md-4">
           <div class="row">
@@ -117,18 +104,15 @@ session_start();
               <span class="fa fa-flask"></span>
               <h3>Tests avialable</h3>
               <?php 
-					$sql=mysqli_query($con,"SELECT * FROM test");
-					while($row=mysqli_fetch_array($sql))
-						{
-					?>
+              $sql=mysqli_query($con,"SELECT * FROM test");
+              while($row=mysqli_fetch_array($sql)) {
+              ?>
               <ul class="opening-table">
-                <li>
-                  <?php echo $row['test_name'] ?>
-                </li>
+                <li><?php echo $row['test_name'] ?></li>
               </ul>   
               <?php
-						}
-					?>           
+              }
+            ?>           
             </div>
           </div>
         </div>
@@ -138,30 +122,24 @@ session_start();
               <span class="fa fa-hospital-o"></span>
               <h3>Test Fees</h3>
               <?php 
-					$sql1=mysqli_query($con,"SELECT * FROM test");
-					while($row1=mysqli_fetch_array($sql1))
-						{
-					?>
+              $sql1=mysqli_query($con,"SELECT * FROM test");
+              while($row1=mysqli_fetch_array($sql1)) {
+              ?>
               <ul class="opening-table">
-                <li>
-                  <?php echo $row1['test_cost'] ?>
-                </li>
-                
+                <li><?php echo $row1['test_cost'] ?></li>
               </ul>   
-               <?php
-						}
-					?>             
+              <?php
+              }
+            ?>             
             </div>
           </div>
         </div>
       </div>
     </section>
     <h4 align="center"><a href="index.php">Book Appointment</a></h4>
-
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
-  <!--=========== End Footer SECTION ================-->
-
+    <!--=========== End Footer SECTION ================-->
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
@@ -175,9 +153,7 @@ session_start();
     <!-- Doctors hover effect -->
     <script src="js/snap.svg-min.js"></script>
     <script src="js/hovers.js"></script>
-    
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-     
   </body>
 </html>

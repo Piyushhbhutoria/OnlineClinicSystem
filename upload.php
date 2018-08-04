@@ -1,9 +1,7 @@
 <?php 
 include('config.php');
-session_start();
 include('session_check.php');
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,15 +9,12 @@ include('session_check.php');
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>SPA Pathcare : Home</title>
-
+      <title>SPA Pathcare : Home</title>
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
@@ -33,15 +28,12 @@ include('session_check.php');
     <!-- Photo Swipe Image Gallery -->     
     <link rel="stylesheet prefetch" href="css/photoswipe.css">
     <link rel="stylesheet prefetch" href="css/default-skin.css">    
-
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
-   
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
     <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -50,17 +42,14 @@ include('session_check.php');
     <![endif]--> 
   </head>
   <body>  
-    
     <!-- BEGAIN PRELOADER -->
     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
-
     <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
@@ -82,7 +71,6 @@ include('session_check.php');
               <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->                    
             </div>
             <!--/.nav-collapse -->           
-            
             <?php include ('menu.php') ?>
           </div>     
         </nav>  
@@ -118,46 +106,43 @@ include('session_check.php');
             <div class="single-top-feature opening-hours">
               <span class="fa fa-flask"></span>
               <h3>Test Appointment</h3>
-                <?php 
-					$sql=mysqli_query($con,"SELECT * FROM test_appointment ");
-					while($row=mysqli_fetch_array($sql))
-						{
-					?>
+              <?php 
+              $sql=mysqli_query($con,"SELECT * FROM test_appointment ");
+              while($row=mysqli_fetch_array($sql)) {
+              ?>
               <ul class="opening-table">
-                <li>
-                  <?php echo $row['Test_name'] ?>
-                </li>
+                <li><?php echo $row['Test_name'] ?></li>
                 <li>&nbsp;</li>
               </ul>  
               <?php
-						}
-					?>
-              </div>
+              }
+            ?>
             </div>
           </div>
+        </div>
         <div class="col-lg-4 col-md-4">
           <div class="row">
             <div class="single-top-feature opening-hours">
               <span class="fa fa-clock-o"></span>
               <h3>Appointment Details</h3>
               <?php 
-					$sql=mysqli_query($con,"SELECT * FROM test_appointment ");
-					while($row=mysqli_fetch_array($sql))
-						{
-					?>
+              $sql=mysqli_query($con,"SELECT * FROM test_appointment ");
+              while($row=mysqli_fetch_array($sql))
+                {
+              ?>
               <ul class="opening-table">
                 <li>
                   <span>Date</span>
                   <div><?php echo $row['Test_date'] ?></div>
-				  </li>
+				        </li>
                 <li>
-                 <span>Time</span>
-				<div><?php echo $row['Test_time'] ?></div>
+                  <span>Time</span>
+				          <div><?php echo $row['Test_time'] ?></div>
                 </li>
               </ul>   
               <?php
-						}
-					?>           
+              }
+            ?>           
             </div>
           </div>
         </div>
@@ -167,10 +152,10 @@ include('session_check.php');
               <span class="fa fa-hospital-o"></span>
               <h3>Report</h3>
               <?php 
-					$sql=mysqli_query($con,"SELECT * FROM test_appointment ");
-					while($row=mysqli_fetch_array($sql))
-						{
-					?>
+              $sql=mysqli_query($con,"SELECT * FROM test_appointment ");
+              while($row=mysqli_fetch_array($sql))
+                {
+              ?>
               <ul class="opening-table">
                 <li>
                   <a href="uploadcode1.php?id=<?php echo $row['Id']?>">Upload</a>
@@ -178,8 +163,8 @@ include('session_check.php');
                 <li>&nbsp;</li>
               </ul>   
                <?php
-						}
-					?>             
+              }
+            ?>             
             </div>
           </div>
         </div>
@@ -195,19 +180,18 @@ include('session_check.php');
               <h3>Doctor Appointment</h3>
                 <?php 
                 $status="Rejected";
-					$sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
-					while($row=mysqli_fetch_array($sql))
-						{
-					?>
-              <ul class="opening-table">
-                <li>
-                  <?php echo $row['Doc_name'] ?>
-                </li>
-                <li>&nbsp;</li>
-              </ul>  
-              <?php
-						}
-					?>
+                $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
+                while($row=mysqli_fetch_array($sql)) {
+                ?>
+                <ul class="opening-table">
+                  <li>
+                    <?php echo $row['Doc_name'] ?>
+                  </li>
+                  <li>&nbsp;</li>
+                </ul>  
+                <?php
+                }
+              ?>
               </div>
             </div>
           </div>
@@ -218,23 +202,23 @@ include('session_check.php');
               <h3>Appointment Details</h3>
               <?php 
               $status="Rejected";
-					$sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
-					while($row=mysqli_fetch_array($sql))
-						{
-					?>
+              $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
+              while($row=mysqli_fetch_array($sql))
+                {
+              ?>
               <ul class="opening-table">
                 <li>
                   <span>Date</span>
                   <div><?php echo $row['App_date'] ?></div>
-				  </li>
+                </li>
                 <li>
-                 <span>Time</span>
-				<div><?php echo $row['App_time'] ?></div>
+                  <span>Time</span>
+                  <div><?php echo $row['App_time'] ?></div>
                 </li>
               </ul>   
               <?php
-						}
-					?>           
+              }
+            ?>           
             </div>
           </div>
         </div>
@@ -245,29 +229,27 @@ include('session_check.php');
               <h3>Report</h3>
               <?php 
               $status="Rejected";
-					$sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
-					while($row=mysqli_fetch_array($sql))
-						{
-					?>
+              $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
+              while($row=mysqli_fetch_array($sql))
+                {
+              ?>
               <ul class="opening-table">
                 <li>
                   <a href="uploadcode.php?id=<?php echo $row['Id']?>">Upload</a>
                 </li>
                 <li>&nbsp;</li>
               </ul>   
-               <?php
-						}
-					?>             
+              <?php
+              }
+            ?>             
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
-  <!--=========== End Footer SECTION ================-->
-
+    <!--=========== End Footer SECTION ================-->
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
@@ -281,9 +263,7 @@ include('session_check.php');
     <!-- Doctors hover effect -->
     <script src="js/snap.svg-min.js"></script>
     <script src="js/hovers.js"></script>
-    
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-     
   </body>
 </html>

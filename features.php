@@ -1,4 +1,3 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,15 +5,12 @@
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>SPA Pathcare : Home</title>
-
+      <title>SPA Pathcare : Home</title>
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
@@ -28,15 +24,12 @@
     <!-- Photo Swipe Image Gallery -->     
     <link rel="stylesheet prefetch" href="css/photoswipe.css">
     <link rel="stylesheet prefetch" href="css/default-skin.css">    
-
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
-   
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
     <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -45,17 +38,14 @@
     <![endif]--> 
   </head>
   <body>  
-    
     <!-- BEGAIN PRELOADER -->
     <div id="preloader">
       <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
-
     <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
@@ -77,14 +67,13 @@
               <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->                    
             </div>
             <!--/.nav-collapse -->           
-            
             <?php include ('menu.php')?>
           </div>     
         </nav>  
       </div>
       <!-- END MENU -->    
     </header>
-    
+
     <section id="blogArchive">      
       <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -149,7 +138,6 @@
                   </div>
                   <div id="collapseTwo" class="panel-collapse collapse">
                     <div class="panel-body">
-                    
                      <p>It performs diagnostic testing for couples presenting with infertility and provides a sperm banking service for later use in donor insemination or IVF procedures. </p>
                     </div>
                   </div>
@@ -178,7 +166,6 @@
                   </div>
                   <div id="collapseFour" class="panel-collapse collapse">
                     <div class="panel-body">
-                    
                      <p> It provides clinical and diagnostic services relating to non-malignant haematological conditions.
                      </p>
                     </div>
@@ -246,8 +233,7 @@
     </section>
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
-  <!--=========== End Footer SECTION ================-->
-
+    <!--=========== End Footer SECTION ================-->
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
@@ -261,9 +247,7 @@
     <!-- Doctors hover effect -->
     <script src="js/snap.svg-min.js"></script>
     <script src="js/hovers.js"></script>
-    
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-     
   </body>
 </html>

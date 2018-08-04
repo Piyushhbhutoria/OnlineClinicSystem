@@ -27,7 +27,7 @@
               </ul>
               </div>
             </div>
-            <!--<div class="col-lg-3 col-md-3 col-sm-3">
+            <div class="col-lg-3 col-md-3 col-sm-3">
               <div class="single-footer-widget">
                 <div class="section-heading">
                 <h2>Tags</h2>
@@ -42,7 +42,7 @@
                   <li><a href="#">Diabetes</a></li>
                 </ul>
               </div>
-            </div>-->
+            </div>
             <div class="col-lg-3 col-md-3 col-sm-3" style="margin-left: 12%">
               <div class="single-footer-widget">
                 <div class="section-heading">
@@ -54,7 +54,7 @@
                 <p><span class="fa fa-home"></span>VIT University
                 Vellore, TN 632014, <i>India</i></p>
                 <p><span class="fa fa-phone"></span>9830768030</p>
-                <p><span class="fa fa-envelope"></span>SPAPathcare@gmail.com</p>
+                <p><span class="fa fa-envelope"></span>piyush.bhutoria98@gmail.com</p>
               </address>
               </div>
             </div>
@@ -72,10 +72,10 @@
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
             <div class="footer-social">              
-                <a href="https://www.facebook.com/imidiotic12"><span class="fa fa-facebook"></span></a>
-                <a href="https://twitter.com/piyushbhutoria9"><span class="fa fa-twitter"></span></a>
-                <a href="https://github.com/Piyushhbhutoria"><span class="fa fa-github"></span></a>
-                <a href="https://www.linkedin.com/in/piyushh-bhutoria-for-you/"><span class="fa fa-linkedin"></span></a>     
+              <a href="https://www.facebook.com/imidiotic12"><span class="fa fa-facebook"></span></a>
+              <a href="https://twitter.com/piyushbhutoria9"><span class="fa fa-twitter"></span></a>
+              <a href="https://github.com/Piyushhbhutoria"><span class="fa fa-github"></span></a>
+              <a href="https://www.linkedin.com/in/piyushh-bhutoria-for-you/"><span class="fa fa-linkedin"></span></a>     
             </div>
           </div>
         </div>

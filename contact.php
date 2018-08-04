@@ -1,25 +1,16 @@
-<?php session_start() ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!--=============================================== 
-    Template Design By WpFreeware Team.
-    Author URI : http://www.wpfreeware.com/
-    ====================================================-->
-
     <!-- Basic Page Needs
     ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>SpA Pathcare : Contact</title>
-
+      <title>SpA Pathcare : Contact</title>
     <!-- Mobile Specific Metas
     ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
     <!-- CSS
     ================================================== -->       
     <!-- Bootstrap css file-->
@@ -33,15 +24,12 @@
     <!-- Photo Swipe Image Gallery -->     
     <link rel="stylesheet prefetch" href="css/photoswipe.css">
     <link rel="stylesheet prefetch" href="css/default-skin.css">    
-
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
-   
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
     <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -55,11 +43,9 @@
       <div id="status">&nbsp;</div>
     </div>
     <!-- END PRELOADER -->
-
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
-
     <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
@@ -74,13 +60,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-
               <!-- LOGO -->              
               <!-- TEXT BASED LOGO -->
               <a class="navbar-brand" href="index.php"><i class="fa fa-heartbeat"></i>SpA <span>Pathcare</span></a>              
               <!-- IMG BASED LOGO  -->
-              <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->     
-                     
+              <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->         
             </div>
             <!--/.nav-collapse -->
             <?php include ('menu.php')?>
@@ -140,21 +124,20 @@
                 <h2>Contact Information</h2>
                 <div class="line"></div>
               </div>
-               <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
+               <p>Feel free to contact us any moment using any of the details provided below.</p>
               <address class="contact-info">               
-                <p><span class="fa fa-home"></span>305 Intergraph Way
-                Madison, AL 35758, INDIA</p>
-                <p><span class="fa fa-phone"></span>1256.730.2000</p>
-                <p><span class="fa fa-envelope"></span>SpAPathcare@gmail.com</p>
+                <p><span class="fa fa-home"></span>VIT University
+                Vellore, TN 632014, <i>India</i></p>
+                <p><span class="fa fa-phone"></span>9830768030</p>
+                <p><span class="fa fa-envelope"></span>piyush.bhutoria98@gmail.com</p>
               </address>
               <h3>Social Media</h3>
               <div class="social-share">               
                <ul>
-                 <li><a href="#"><span class="fa fa-facebook"></span></a></li>
-                 <li><a href="#"><span class="fa fa-twitter"></span></a></li>
-                 <li><a href="#"><span class="fa fa-pinterest"></span></a></li>
-                 <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
-                 <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
+                 <li><a href="https://www.facebook.com/imidiotic12"><span class="fa fa-facebook"></span></a></li>
+                 <li><a href="https://twitter.com/piyushbhutoria9"><span class="fa fa-twitter"></span></a></li>
+                 <li><a href="https://github.com/Piyushhbhutoria"><span class="fa fa-github"></span></a></li>
+                 <li><a href="https://www.linkedin.com/in/piyushh-bhutoria-for-you/"><span class="fa fa-linkedin"></span></a></li>
                </ul>
              </div>
             </div>
@@ -162,11 +145,9 @@
         </div>
       </div>
     </section>
-
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
     <!--=========== End Footer SECTION ================-->
-
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
     <!-- Bootstrap default js -->
@@ -184,9 +165,7 @@
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>    
     <script src="js/photoswipe-gallery.js"></script>
-
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-     
   </body>
 </html>
