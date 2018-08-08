@@ -1,8 +1,7 @@
 <?php 
 	include ('config.php');
 	$id = $_GET['id'];
-	$status = "Rejected";
-	$res = mysqli_query($con,"update doctor_app set Status = '$status' where Id = '$id'");
+	$res = mysqli_query($con,"update doctor_app set Status = 'Rejected' where Id = '$id'");
 	if($res == 1) {
 		?>
 		<script>

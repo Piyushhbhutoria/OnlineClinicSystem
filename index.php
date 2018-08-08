@@ -202,7 +202,7 @@ include("config.php");
                                 <div class="col-md-6 col-sm-6">
                                   <label class="control-label">Appointment Date <span class="required">*</span>
                                   </label>
-                                  <input type="date" class="wp-form-control wpcf7-text" placeholder="mm/dd/yy" name="appdate1" min="<?php echo date("Y-m-d"); ?>" max="<?php echo date("Y-m+1-d"); ?>" required >
+                                  <input type="Date" class="wp-form-control wpcf7-text" placeholder="mm/dd/yy" name="appdate1" min="<?php echo date("Y-m-d"); ?>" max="<?php echo date("Y-m+1-d"); ?>" required >
                                 </div>
                                 <div class="col-md-6 col-sm-6">
                                   <label class="control-label">Appointment Time <span class="required">*</span>
