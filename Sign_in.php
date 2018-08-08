@@ -29,9 +29,7 @@
 				$keys="doctor";
 				$_SESSION['log1']=$keys;
 				header("location:index.php");
-			}
-			else
-			{
+			} else {
 				?>
 				<script>
 					alert ("Wrong Email ID or Password");

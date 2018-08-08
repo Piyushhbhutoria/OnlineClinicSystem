@@ -1,6 +1,4 @@
-<?php 
-include("config.php"); 
-?>
+<?php include("config.php"); ?>
 <h1>Insert New Doctor</h1>
 <table>
 	<form method="post">
@@ -50,10 +48,8 @@ include("config.php");
 	</form>
 </table>
 
-
 <?php
-	if (isset($_POST['btn']))
-	{
+	if (isset($_POST['btn'])) {
 		$name = $_POST['name'];
 		$email = $_POST['mail'];
 		$dob = $_POST['dob'];
@@ -63,24 +59,21 @@ include("config.php");
 		$pwd = $_POST['pwd'];
 		$fee = $_POST['fee'];
 		$cat = $_POST['category'];
-		$res1 = mysqli_query($con,"INSERT INTO doctor (Name, Email, Dob, Gender, Address, Phoneno, Password, Fees, Category) VALUES ('$name','$email','$dob','$gnd','$addr','$phno','$pwd','$fee','$cat')");
-		if($res1)
-		{
+		$res1 = mysqli_query($con,"INSERT INTO doctor (Name, Email, Dob, Gender, Address, Phoneno, Password, Fees, Category,Dp) VALUES ('$name','$email','$dob','$gnd','$addr','$phno','$pwd','$fee','$cat','')");
+		if($res1) {
+		?>
+			<script>
+				alert ("Added Sucessfully");
+				window.location.href = "update.php";
+			</script>
+		<?php
+		} else {
 			?>
-	<script>
-		alert ("Added Sucessfully");
-		window.location.href = "update.php";
-	</script>
-<?php
-		}
-		else
-		{
-			?>
-	<script>
-		alert ("Add Unsucessful");
-		window.location.href = "insertdoc.php";
-	</script>
-<?php
+			<script>
+				alert ("Add Unsucessful");
+				window.location.href = "insertdoc.php";
+			</script>
+		<?php
 		}
 	}
 	?>
