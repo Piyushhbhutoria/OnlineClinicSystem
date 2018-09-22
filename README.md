@@ -1,12 +1,17 @@
-# OnlineClincSystem
+# Online Clinic System
 
-Online Clinic System DBMS Project using PHP7.x, PHPmyadmin, mySQL5.x.  
+>**Feel Free To Contribute.**
 
-Import project.sql in your SQL database.  
+## This Repo is Online Clinic System DBMS Project using PHP7.x, PHPmyadmin, mySQL5.x  
+  
+1. Admin, Customer, Doctor login  
+2. Sessions  
+3. Dynamic header  
+4. Book doctor and test appointment  
+5. Online Report  
 
 Change credentials in config.php.  
+
+```php  
 <?php $con = mysqli_connect("localhost","user","password","database") or die(mysqli_error()); ?>  
-
-Template folder has the original template.  
-
-Report.pdf is the overall project report.  
+```  
