@@ -2,31 +2,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Basic Page Needs
-    ================================================== -->
+    <!-- Basic Page Needs ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>SPA Pathcare : Home</title>
-    <!-- Mobile Specific Metas
-    ================================================== -->
+      <title>SPA Pathcare : Register</title>
+    
+    <!-- Mobile Specific Metas ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-    <!-- CSS
-    ================================================== -->       
+    
+    <!-- CSS ================================================== -->       
+    
     <!-- Bootstrap css file-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Font awesome css file-->
     <link href="css/font-awesome.min.css" rel="stylesheet">       
+    
     <!-- Default Theme css file -->
-    <link id="switcher" href="css/themes/orange-theme.css" rel="stylesheet">   
+    <link id="switcher" href="css/themes/orange-theme.css" rel="stylesheet">    
+    
     <!-- Slick slider css file -->
     <link href="css/slick.css" rel="stylesheet"> 
-    <!-- Photo Swipe Image Gallery -->     
-    <link rel="stylesheet prefetch" href="css/photoswipe.css">
-    <link rel="stylesheet prefetch" href="css/default-skin.css">    
+    
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
+    
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
@@ -47,6 +50,7 @@
     <!-- SCROLL TOP BUTTON -->
     <a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
     <!-- END SCROLL TOP BUTTON -->
+    
     <!--=========== BEGIN HEADER SECTION ================-->
     <header id="header">
       <!-- BEGIN MENU -->
@@ -75,6 +79,7 @@
       <!-- END MENU -->    
     </header>
     <!--=========== END HEADER SECTION ================-->      
+    
     <section id="blogArchive">      
       <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -104,11 +109,11 @@
               <span class="fa fa-flask"></span>
               <h3>Tests avialable</h3>
               <?php 
-              $sql=mysqli_query($con,"SELECT * FROM test");
-              while($row=mysqli_fetch_array($sql)) {
+                $sql=mysqli_query($con,"SELECT * FROM test");
+                while($row=mysqli_fetch_array($sql)) {
               ?>
               <ul class="opening-table">
-                <li><?php echo $row['test_name'] ?></li>
+                <li><?php echo $row['name'] ?></li>
               </ul>   
               <?php
               }
@@ -122,11 +127,11 @@
               <span class="fa fa-hospital-o"></span>
               <h3>Test Fees</h3>
               <?php 
-              $sql1=mysqli_query($con,"SELECT * FROM test");
-              while($row1=mysqli_fetch_array($sql1)) {
+                $sql1=mysqli_query($con,"SELECT * FROM test");
+                while($row1=mysqli_fetch_array($sql1)) {
               ?>
               <ul class="opening-table">
-                <li><?php echo $row1['test_cost'] ?></li>
+                <li><?php echo $row1['cost'] ?></li>
               </ul>   
               <?php
               }
@@ -137,22 +142,29 @@
       </div>
     </section>
     <h4 align="center"><a href="index.php">Book Appointment</a></h4>
+    
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
     <!--=========== End Footer SECTION ================-->
+    
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
+    
     <!-- Bootstrap default js -->
     <script src="js/bootstrap.min.js"></script>
+    
     <!-- slick slider -->
     <script src="js/slick.min.js"></script>    
     <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>    
+    
     <!-- counter -->
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
+    
     <!-- Doctors hover effect -->
     <script src="js/snap.svg-min.js"></script>
     <script src="js/hovers.js"></script>
+    
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
   </body>

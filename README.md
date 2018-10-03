@@ -4,6 +4,8 @@
 
 ## This Repo is Online Clinic System DBMS Project using PHP7.x, PHPmyadmin, mySQL5.x  
   
+Features  
+
 1. Admin, Customer, Doctor login  
 2. Sessions  
 3. Dynamic header  

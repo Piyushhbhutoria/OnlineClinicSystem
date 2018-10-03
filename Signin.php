@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Basic Page Needs
-    ================================================== -->
+<head>
+    <!-- Basic Page Needs ================================================== -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>SpA Pathcare : Sign in</title>
-    <!-- Mobile Specific Metas
-    ================================================== -->
+      <title>SPA Pathcare : Sign In</title>
+    
+    <!-- Mobile Specific Metas ================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-    <!-- CSS
-    ================================================== -->       
+    
+    <!-- CSS ================================================== -->       
+    
     <!-- Bootstrap css file-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    
     <!-- Font awesome css file-->
     <link href="css/font-awesome.min.css" rel="stylesheet">       
+    
     <!-- Default Theme css file -->
     <link id="switcher" href="css/themes/orange-theme.css" rel="stylesheet">    
+    
     <!-- Slick slider css file -->
     <link href="css/slick.css" rel="stylesheet"> 
+    
     <!-- Main structure css file -->
     <link href="style.css" rel="stylesheet">
+    
     <!-- Google fonts -->
     <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">  
     <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">   
@@ -71,6 +77,7 @@
       <!-- END MENU -->    
     </header>
     <!--=========== END HEADER SECTION ================-->      
+    
     <section id="blogArchive">      
       <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -91,7 +98,8 @@
         </div>        
       </div>      
     </section>
-    <!--=========== BEGAIN Doctors SECTION ================-->
+    
+    <!--=========== BEGAIN SignIn SECTION ================-->
     <section id="meetDoctors">
       <div class="container">
         <div class="row">
@@ -126,30 +134,39 @@
         </div>
       </div>
     </section>
-    <!--=========== End Doctors SECTION ================-->
+    <!--=========== End SignIn SECTION ================-->
+    
     <!--=========== BEGAIN Counter SECTION ================-->
     <?php include('counter.php') ?>
     <!--=========== End Counter SECTION ================-->
+    
     <!--=========== Start Footer SECTION ================-->
     <?php include('footer.php') ?>
     <!--=========== End Footer SECTION ================-->
+    
     <!-- jQuery Library  -->
     <script src="js/jquery.js"></script>    
+    
     <!-- Bootstrap default js -->
     <script src="js/bootstrap.min.js"></script>
+    
     <!-- slick slider -->
     <script src="js/slick.min.js"></script>    
     <script type="text/javascript" src="js/modernizr.custom.79639.js"></script>     
+    
     <!-- counter -->
     <script src="js/waypoints.min.js"></script>
     <script src="js/jquery.counterup.min.js"></script>
+    
     <!-- Doctors hover effect -->
     <script src="js/snap.svg-min.js"></script>
     <script src="js/hovers.js"></script>
+    
     <!-- Photo Swipe Gallery Slider -->
     <script src="js/photoswipe.min.js"></script>
     <script src="js/photoswipe-ui-default.min.js"></script>    
     <script src="js/photoswipe-gallery.js"></script>
+    
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
   </body>

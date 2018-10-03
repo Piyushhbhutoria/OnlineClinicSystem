@@ -42,7 +42,7 @@
 		if($upload) {
 			if($_SESSION['log1']=="client") {
 			#save data
-			$saveData = mysqli_query($con,"UPDATE client SET Dp='$server_path' WHERE Id='$id' ")or die(mysqli_error());
+			$saveData = mysqli_query($con,"UPDATE user SET Dp='$server_path' WHERE Id='$id' ")or die(mysqli_error());
 			} else if($_SESSION['log1']=="doctor") {
 				#save data
 				$saveData = mysqli_query($con,"UPDATE doctor SET Dp='$server_path' WHERE Id='$id' ")or die(mysqli_error());

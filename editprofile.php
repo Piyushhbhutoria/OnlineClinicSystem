@@ -173,7 +173,7 @@ include('session_check.php');
                       <div class="col-md-6 col-sm-6">
                         <label class="control-label">Your Phone <span class="required">*</span>
                         </label>
-                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" name="phno" required>  
+                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['phone'] ?>" name="phno" required>  
                       </div>         
                     </div>                          
                     <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update</span></button>
@@ -193,7 +193,7 @@ include('session_check.php');
                     <div class="row">
                       <div class="col-md-6 col-sm-6">
                         <label class="control-label">Your Phone <span class="required">*</span></label>
-                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" name="phno" required>  
+                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['phone'] ?>" name="phno" required>  
                       </div>         
                     </div>                          
                     <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update</span></button>
@@ -220,7 +220,7 @@ include('session_check.php');
                       <div class="col-md-6 col-sm-6">
                         <label class="control-label">Your Phone <span class="required">*</span>
                         </label>
-                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" name="phno" required>  
+                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['phone'] ?>" name="phno" required>  
                       </div>         
                     </div>                          
                     <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update</span></button>

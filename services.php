@@ -1,4 +1,3 @@
-
 <section id="service">
   <div class="container">
     <div class="row">
@@ -12,8 +11,6 @@
           <!-- Start Service Content -->
           <div class="service-content">
             <div class="row">
-              
-              <!-- Start Single Service -->
               <div class="col-lg-4 col-md-4">
                 <div class="single-service">
                   <div class="service-icon">
@@ -23,7 +20,6 @@
                   <p>For all your tests related health needs this is the right place you are looking for,we cater to our patients need with utmost care.</p>
                 </div>
               </div>
-              <!-- Start Single Service -->
               <div class="col-lg-4 col-md-4">
                 <div class="single-service">
                   <div class="service-icon">
@@ -33,7 +29,6 @@
                   <p>Performing a full background check of our doctors and workers so that our patients don’t face any inconvenience.</p>
                 </div>
               </div>
-              <!-- Start Single Service -->
               <div class="col-lg-4 col-md-4">
                 <div class="single-service">
                   <div class="service-icon">
@@ -43,7 +38,6 @@
                   <p>A special doctor who acts as senior overlooker providing extra suggestions to all your cases.</p>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>

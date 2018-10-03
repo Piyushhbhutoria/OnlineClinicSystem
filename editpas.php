@@ -7,7 +7,7 @@
 	$repwd = $_POST['repwd'];
 	if ($pwd==$repwd) {
 		if($_SESSION['log1']=="client") {
-			$res = mysqli_query($con,"UPDATE client SET Password='$pwd' WHERE Id='$id' ");
+			$res = mysqli_query($con,"UPDATE user SET Password='$pwd' WHERE Id='$id' ");
 		} else if($_SESSION['log1'] == "admin") {
 			$res = mysqli_query($con,"UPDATE admin SET Password='$pwd' WHERE Id='$id' ");
 		} else if($_SESSION['log1'] == "doctor") {

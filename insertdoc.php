@@ -58,8 +58,9 @@
 		$phno = $_POST['phno'];
 		$pwd = $_POST['pwd'];
 		$fee = $_POST['fee'];
-		$cat = $_POST['category'];
-		$res1 = mysqli_query($con,"INSERT INTO doctor (Name, Email, Dob, Gender, Address, Phoneno, Password, Fees, Category,Dp) VALUES ('$name','$email','$dob','$gnd','$addr','$phno','$pwd','$fee','$cat','')");
+		$dep = $_POST['category'];
+		$qry = mysqli_query($con,"INSERT INTO logins (email, password, type) VALUES ('$fname'.'$lname', '$pwd', 'doctor')");
+		$res1 = mysqli_query($con,"INSERT INTO doctor (name, email, gender, address, phone, fee, department, picture) VALUES ('$name','$email', '$gnd', '$addr', '$phno', '$fee', '$dep','')");
 		if($res1) {
 		?>
 			<script>
