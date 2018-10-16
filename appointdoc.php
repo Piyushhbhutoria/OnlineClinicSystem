@@ -14,7 +14,7 @@
 		$doc = $_POST['docname'];
 		$appdate = $_POST['appdate'];
 		$apptime = $_POST['apptime'];
-		$qry = mysqli_query($con,"INSERT INTO doctor_app (Doc_name,App_date,App_time,Users_id,User_name,Report,Status) VALUES ('$doc','$appdate','$apptime','$id','$name','','Accepted')");
+		$qry = mysqli_query($con,"INSERT INTO doctor_app (Doc_name,App_date,App_time,User_id,User_name,Report) VALUES ('$doc','$appdate','$apptime','$id','$name','')");
 		if($qry) {
 		?>
 			<script>

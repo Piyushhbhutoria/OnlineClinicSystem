@@ -104,7 +104,7 @@
               </div>
               <div class="modal-body" style="margin-left:25%">
                 <div class="appointment-area">
-                  <form class="appointment-form" action="Registration.php" method="post">
+                  <form class="appointment-form" action="registration.php" method="post">
                     <div class="row">
                       <div class="col-md-6 col-sm-6">
                         <label class="control-label">Your name <span class="required">*</span></label>

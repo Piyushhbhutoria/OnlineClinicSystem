@@ -110,7 +110,7 @@ include('session_check.php');
                   <span class="fa fa-flask"></span>
                   <h3>Test Appointment</h3>
                     <?php 
-                    $sql = mysqli_query($con,"SELECT * FROM test_appointment WHERE Users_id='$id' ");
+                    $sql = mysqli_query($con,"SELECT * FROM test_appointment WHERE User_id='$id' ");
                     while($row = mysqli_fetch_array($sql)) {
                     ?>
                       <ul class="opening-table">
@@ -129,7 +129,7 @@ include('session_check.php');
                   <span class="fa fa-clock-o"></span>
                   <h3>Appointment Details</h3>
                   <?php 
-                  $sql=mysqli_query($con,"SELECT * FROM test_appointment WHERE Users_id='$id'");
+                  $sql=mysqli_query($con,"SELECT * FROM test_appointment WHERE User_id='$id'");
                   while($row=mysqli_fetch_array($sql)) {
                   ?>
                     <ul class="opening-table">
@@ -154,7 +154,7 @@ include('session_check.php');
                   <span class="fa fa-hospital-o"></span>
                   <h3>Report</h3>
                   <?php 
-                  $sql=mysqli_query($con,"SELECT * FROM test_appointment WHERE Users_id='$id'");
+                  $sql=mysqli_query($con,"SELECT * FROM test_appointment WHERE User_id='$id'");
                   while($row=mysqli_fetch_array($sql)) {
                   ?>
                     <ul class="opening-table">
@@ -178,7 +178,7 @@ include('session_check.php');
                   <span class="fa fa-flask"></span>
                   <h3>Doctor Appointment</h3>
                     <?php 
-                    $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Users_id='$id' ");
+                    $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE User_id='$id' ");
                     while($row=mysqli_fetch_array($sql)){
                     ?>
                       <ul class="opening-table">
@@ -199,7 +199,7 @@ include('session_check.php');
                   <span class="fa fa-clock-o"></span>
                   <h3>Appointment Details</h3>
                   <?php 
-                  $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Users_id='$id'");
+                  $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE User_id='$id'");
                   while($row=mysqli_fetch_array($sql))
                     {
                   ?>
@@ -225,7 +225,7 @@ include('session_check.php');
                   <span class="fa fa-hospital-o"></span>
                   <h3>Report</h3>
                   <?php 
-                  $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Users_id='$id'");
+                  $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE User_id='$id'");
                   while($row=mysqli_fetch_array($sql)) {
                     $sts=$row['Status'];
                     if($sts=="Rejected") {

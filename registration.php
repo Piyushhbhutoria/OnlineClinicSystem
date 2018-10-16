@@ -16,7 +16,7 @@
 		?>
 		<script>
 			alert ("Registered Successfullly");
-			window.location.href = "Sign in.php";
+			window.location.href = "Sign_in.php";
 		</script>
 		<?php
 	} else {

@@ -13,7 +13,7 @@
 		$test = $_POST['test'];
 		$appdate = $_POST['appdate1'];
 		$apptime = $_POST['apptime1'];
-		$qry = mysqli_query($con,"INSERT INTO test_appointment (Test_name,Test_time,Test_date,Users_id,Report) VALUES ('$test','$apptime','$appdate','$id','')");
+		$qry = mysqli_query($con,"INSERT INTO test_appointment (Test_name,Test_time,Test_date,User_id,Report) VALUES ('$test','$apptime','$appdate','$id','')");
 		if($qry) {
 		?>
 			<script>
