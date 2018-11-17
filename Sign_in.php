@@ -33,7 +33,7 @@
 				?>
 				<script>
 					alert ("Wrong Email ID or Password");
-					window.location.href = "Sign in.php";
+					window.location.href = "Signin.php";
 				</script>
 			<?php	
 			}

@@ -179,9 +179,9 @@ include('session_check.php');
               <span class="fa fa-flask"></span>
               <h3>Doctor Appointment</h3>
                 <?php 
-                $status="Rejected";
-                $sql=mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
-                while($row=mysqli_fetch_array($sql)) {
+                $status = "Rejected";
+                $sql = mysqli_query($con,"SELECT * FROM doctor_app WHERE Status!='$status' ");
+                while($row = mysqli_fetch_array($sql)) {
                 ?>
                 <ul class="opening-table">
                   <li>
