@@ -1,5 +1,5 @@
 <?php
-if(isset($_SESSION['log']) || !empty($_SESSION['log'])) {
+if(!isset($_SESSION['log']) || $_SESSION['log'] == '') {
 ?>
 	<script>
 		alert ("Login first!");
