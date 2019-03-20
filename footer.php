@@ -86,7 +86,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <p>Design & Developed By <a rel="nofollow" href="http://www.wpfreeware.com/">SPA Pathcare</a></p>
+                    <p>Design & Developed By <a rel="nofollow">SPA Pathcare</a></p>
                 </div>
             </div>
         </div>
