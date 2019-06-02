@@ -1,7 +1,4 @@
-<?php
-include('config.php');
-include('session_check.php');
-?>
+<?php include('config.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -75,6 +72,7 @@ include('session_check.php');
     <!-- END MENU -->
 </header>
 <!--=========== END HEADER SECTION ================-->
+<?php include('session_check.php'); ?>
 <section id="blogArchive">
     <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -113,7 +111,9 @@ include('session_check.php');
                                     <div class="row">
                                         <div class="single-testimonial1" style="width: 550px">
                                             <div class="testimonial-img">
+                                                <?php if($_SESSION['log']['Dp'] != NULL) { ?>
                                                 <img src="<?php echo $_SESSION['log']['Dp'] ?>" alt="img">
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>
@@ -173,7 +173,7 @@ include('session_check.php');
                                         <div class="col-md-6 col-sm-6">
                                             <label class="control-label">Your Phone <span class="required">*</span>
                                             </label>
-                                            <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['phone'] ?>" name="phno" required>
+                                            <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" name="phno" required>
                                         </div>
                                     </div>
                                     <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update</span></button>
@@ -193,7 +193,7 @@ include('session_check.php');
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <label class="control-label">Your Phone <span class="required">*</span></label>
-                                            <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['phone'] ?>" name="phno" required>
+                                            <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" name="phno" required>
                                         </div>
                                     </div>
                                     <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update</span></button>
@@ -220,7 +220,7 @@ include('session_check.php');
                                         <div class="col-md-6 col-sm-6">
                                             <label class="control-label">Your Phone <span class="required">*</span>
                                             </label>
-                                            <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['phone'] ?>" name="phno" required>
+                                            <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" name="phno" required>
                                         </div>
                                     </div>
                                     <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update</span></button>

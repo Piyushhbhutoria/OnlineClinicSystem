@@ -1,4 +1,3 @@
-<?php  include('session_check.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,7 +77,7 @@
     <!-- END MENU -->
 </header>
 <!--=========== END HEADER SECTION ================-->
-
+<?php include('session_check.php'); ?>
 <section id="blogArchive">
     <div class="row">
         <div class="col-lg-12 col-md-12">
@@ -116,7 +115,9 @@
                                 <div class="row">
                                     <div class="single-testimonial1" style="width: 550px">
                                         <div class="testimonial-img">
-                                            <img src="<?php echo $_SESSION['log']['picture'] ?>">
+                                            <?php if($_SESSION['log']['Dp'] != NULL) { ?>
+                                            <img src="<?php echo $_SESSION['log']['Dp'] ?>">
+                                            <?php } ?>
                                         </div>
                                         <div class="testimonial-cotent">
                                             <p class="testimonial-parg">To Upload your Profile Picture go to Update Profile</p>
@@ -126,31 +127,31 @@
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <label class="control-label">Your name <span class="required">*</span></label>
-                                        <input type="text" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['name'] ?>" readonly>
+                                        <input type="text" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Name'] ?>" readonly>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <label class="control-label">Your Email <span class="required">*</span></label>
-                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['email'] ?>" readonly>
+                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Email'] ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <label class="control-label">Your DOB <span class="required">*</span></label>
-                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['dob'] ?>" readonly>
+                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Dob'] ?>" readonly>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <label class="control-label">Your Gender <span class="required">*</span></label>
-                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['gender'] ?>" readonly>
+                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Gender'] ?>" readonly>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6">
                                         <label class="control-label">Your Address <span class="required">*</span></label>
-                                        <input type="text" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['address'] ?>" readonly>
+                                        <input type="text" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Address'] ?>" readonly>
                                     </div>
                                     <div class="col-md-6 col-sm-6">
                                         <label class="control-label">Your Phone <span class="required">*</span></label>
-                                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['phone'] ?>" readonly>
+                                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" readonly>
                                     </div>
                                 </div>
                                 <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update Profile</span></button>

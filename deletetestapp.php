@@ -1,7 +1,7 @@
 <?php
 include ('config.php');
 $id = $_GET['id'];
-$res = mysqli_query($con,"delete from test_appointment where id = '$id'");
+$res = mysqli_query($con,"DELETE FROM test_appointment WHERE id = '$id'");
 if($res == 1) {
     ?>
     <script>

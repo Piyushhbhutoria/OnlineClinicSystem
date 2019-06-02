@@ -1,7 +1,4 @@
-<?php
-include('config.php');
-include('session_check.php');
-?>
+<?php include('config.php');  ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -78,6 +75,7 @@ include('session_check.php');
     <!-- END MENU -->
 </header>
 <!--=========== END HEADER SECTION ================-->
+<?php include('session_check.php'); ?>
 <section id="blogArchive">
     <div class="row">
         <div class="col-lg-12 col-md-12">
