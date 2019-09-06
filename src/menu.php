@@ -1,27 +1,27 @@
 <?php
 session_start();
-if(isset($_SESSION['log']) == "") {
+if (isset($_SESSION['log']) == "") {
     ?>
     <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
             <li><a href="index.php">Home</a></li>
             <li><a href="features.php">Features</a></li>
-            <li><a href="about-us.php">About Us</a></li>
+            <li><a href="aboutUs.php">About Us</a></li>
             <li><a href="service.php">Service</a></li>
             <li><a href="gallery.php">Gallery</a></li>
-            <li><a href="Register.php">Register</a></li>
-            <li><a href="Signin.php">Sign in</a></li>
+            <li><a href="register.php">Register</a></li>
+            <li><a href="signin.php">Sign in</a></li>
             <li><a href="contact.php">Contact</a></li>
         </ul>
     </div>
     <?php
-} else if($_SESSION['log1'] == "client") {
+} else if ($_SESSION['log1'] == "client") {
     ?>
     <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
             <li><a href="index.php">Home</a></li>
             <li><a href="features.php">Features</a></li>
-            <li><a href="about-us.php">About Us</a></li>
+            <li><a href="aboutUs.php">About Us</a></li>
             <li><a href="service.php">Service</a></li>
             <li><a href="gallery.php">Gallery</a></li>
             <li class="dropdown">
@@ -37,7 +37,7 @@ if(isset($_SESSION['log']) == "") {
         </ul>
     </div>
     <?php
-} else if($_SESSION['log1'] == "admin") {
+} else if ($_SESSION['log1'] == "admin") {
     ?>
     <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
@@ -50,7 +50,7 @@ if(isset($_SESSION['log']) == "") {
         </ul>
     </div>
     <?php
-} else if($_SESSION['log1'] == "doctor") {
+} else if ($_SESSION['log1'] == "doctor") {
     ?>
     <div id="navbar" class="navbar-collapse collapse">
         <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
@@ -68,4 +68,3 @@ if(isset($_SESSION['log']) == "") {
     </div>
     <?php
 }
-?>

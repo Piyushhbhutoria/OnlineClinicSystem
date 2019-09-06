@@ -1,10 +1,4 @@
-/**	
-	* Template Name: WpF Medinova - Ultra Modern Responsive Bootstrap Educational Html5 Template
-	* Version: 1.0	
-	* Template Scripts
-	* Author: WpFreeware Team
-	* Author URI: http://wpfreeware.com/
-
+/**
 	Custom JS
 	
 	1. DROPDOWN MENU
@@ -16,12 +10,10 @@
 	7. TESTIMONIAL SLIDER(SLICK SLIDER)
 	8. PRELOADER
 	9. SCROLL TOP BUTTON
-	10. ACCORDION	 	
-	
+	10. ACCORDION
 **/
 
 jQuery(function($){
-
 
   /* ----------------------------------------------------------- */
   /*  1. DROPDOWN MENU
@@ -49,7 +41,6 @@ jQuery(function($){
       $(".navbar-right .dropdown-menu").css('top','75px');
       }
     });
-    
 
     /* ----------------------------------------------------------- */
 	/*  3. Top Slider
@@ -87,7 +78,6 @@ jQuery(function($){
             delay: 10,
             time: 1000
         });
-
 
 	/* ----------------------------------------------------------- */
 	/*  6. DOCTORS TEAM SLIDER

@@ -1,4 +1,4 @@
-<?php include('config.php'); ?>
+<?php include('src/config.php'); ?>
     <h1>Insert New</h1>
     <table>
         <form method="post">
@@ -17,22 +17,22 @@
     </table>
 
 <?php
-if(isset($_POST['btn'])) {
+if (isset($_POST['btn'])) {
     $testname = $_POST['testname'];
     $testfee = $_POST['testfee'];
-    $res = mysqli_query($con,"INSERT INTO test (test_name,test_cost) VALUES ('$testname','$testfee')");
-    if($res==1) {
+    $res = mysqli_query($con, "INSERT INTO test (test_name,test_cost) VALUES ('$testname','$testfee')");
+    if ($res == 1) {
         ?>
         <script>
-            alert ("Insertion Sucesssful");
-            window.location.href="update.php";
+          alert("Insertion Sucesssful");
+          window.location.href = "update.php";
         </script>
         <?php
     } else {
         ?>
         <script>
-            alert ("Insertion Unucesssful");
-            window.location.href="update.php";
+          alert("Insertion Unucesssful");
+          window.location.href = "update.php";
         </script>
         <?php
     }

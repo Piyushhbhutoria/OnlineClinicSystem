@@ -1,30 +1,31 @@
-<?php include("config.php"); ?>
+<?php include("src/config.php"); ?>
     <h1>Insert New Doctor</h1>
     <table>
         <form method="post">
             <tr>
                 <td>Name</td>
-                <td><input type="text" name="name" ></td>
+                <td><input type="text" name="name"></td>
             </tr>
             <tr>
                 <td>Email</td>
-                <td><input type="email" name="mail" ></td>
+                <td><input type="email" name="mail"></td>
             </tr>
             <tr>
             <tr>
                 <td>DOB</td>
-                <td><input type="date" name="dob" ></td>
+                <td><input type="date" name="dob"></td>
             </tr>
             <tr>
                 <td>Gender</td>
                 <td><select name="gnd">
                         <option value="Male">Male</option>
                         <option value="Female">Female</option>
-                    </select></td>
+                    </select>
+                </td>
             </tr>
             <tr>
                 <td>Address</td>
-                <td><input type="text" name="addr" ></td>
+                <td><input type="text" name="addr"></td>
             </tr>
             <tr>
                 <td>Phone no.</td>
@@ -59,20 +60,20 @@ if (isset($_POST['btn'])) {
     $pwd = $_POST['pwd'];
     $fee = $_POST['fee'];
     $dep = $_POST['category'];
-    $qry = mysqli_query($con,"INSERT INTO logins (email, password, type) VALUES ('$fname'.'$lname', '$pwd', 'doctor')");
-    $res1 = mysqli_query($con,"INSERT INTO doctor (name, email, gender, address, phone, fee, department, picture) VALUES ('$name','$email', '$gnd', '$addr', '$phno', '$fee', '$dep','')");
-    if($res1) {
+    $qry = mysqli_query($con, "INSERT INTO logins (email, password, type) VALUES ('$fname'.'$lname', '$pwd', 'doctor')");
+    $res1 = mysqli_query($con, "INSERT INTO doctor (name, email, gender, address, phone, fee, department, picture) VALUES ('$name','$email', '$gnd', '$addr', '$phno', '$fee', '$dep','')");
+    if ($res1) {
         ?>
         <script>
-            alert ("Added Sucessfully");
-            window.location.href = "update.php";
+          alert("Added Sucessfully");
+          window.location.href = "update.php";
         </script>
         <?php
     } else {
         ?>
         <script>
-            alert ("Add Unsucessful");
-            window.location.href = "insertdoc.php";
+          alert("Add Unsucessful");
+          window.location.href = "insertdoc.php";
         </script>
         <?php
     }

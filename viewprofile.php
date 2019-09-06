@@ -1,161 +1,119 @@
+<?php include('src/functions.php') ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Basic Page Needs ================================================== -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>SPA Pathcare : View profile</title>
-
-    <!-- Mobile Specific Metas ================================================== -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/icon" href="images/favicon.ico"/>
-
-    <!-- CSS ================================================== -->
-
-    <!-- Bootstrap css file-->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Font awesome css file-->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Default Theme css file -->
-    <link id="switcher" href="css/themes/orange-theme.css" rel="stylesheet">
-
-    <!-- Slick slider css file -->
-    <link href="css/slick.css" rel="stylesheet">
-
-    <!-- Main structure css file -->
-    <link href="style.css" rel="stylesheet">
-
-    <!-- Google fonts -->
-    <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Habibi" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Cinzel+Decorative:900" rel="stylesheet" type="text/css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <?php include('src/head.php') ?>
 </head>
 <body>
-<!-- BEGAIN PRELOADER -->
-<div id="preloader">
-    <div id="status">&nbsp;</div>
-</div>
-<!-- END PRELOADER -->
-<!-- SCROLL TOP BUTTON -->
-<a class="scrollToTop" href="#"><i class="fa fa-heartbeat"></i></a>
-<!-- END SCROLL TOP BUTTON -->
-<!--=========== BEGIN HEADER SECTION ================-->
-<header id="header">
-    <!-- BEGIN MENU -->
-    <div class="menu_area">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <!-- LOGO -->
-                    <!-- TEXT BASED LOGO -->
-                    <a class="navbar-brand" href="index.php"><i class="fa fa-heartbeat"></i>SPA <span>Pathcare</span></a>
-                    <!-- IMG BASED LOGO  -->
-                    <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->
-                </div>
-                <!--/.nav-collapse -->
-                <?php include ('menu.php') ?>
-            </div>
-        </nav>
-    </div>
-    <!-- END MENU -->
-</header>
-<!--=========== END HEADER SECTION ================-->
-<?php include('session_check.php'); ?>
-<section id="blogArchive">
-    <div class="row">
-        <div class="col-lg-12 col-md-12">
-            <div class="blog-breadcrumbs-area">
-                <div class="container">
-                    <div class="blog-breadcrumbs-left">
-                        <h2>View Profile</h2>
-                    </div>
-                    <div class="blog-breadcrumbs-right">
-                        <ol class="breadcrumb">
-                            <li>You are here</li>
-                            <li><a href="#">Home</a></li>
-                            <li class="active">View Profile</li>
-                        </ol>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section id="meetDoctors">
+<?php include('src/preload.php') ?>
+<!--=========== BEGIN HEADER SECTION ================-->
+<?php include('src/header.php') ?>
+<!--=========== END HEADER SECTION ================-->
+
+<?php
+include('src/session_check.php');
+echo youAreHere("View Profile");
+?>
+
+<section id="service">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 col-md-12">
-                <div class="meetDoctors-area">
+                <div class="service-area">
                     <!-- Start Service Title -->
                     <div class="section-heading">
                         <h2>My Profile</h2>
                         <div class="line"></div>
                     </div>
-                    <div class="modal-body">
-                        <div class="appointment-area">
-                            <form class="appointment-form" action="editprofile.php" method="post">
-                                <div class="row">
-                                    <div class="single-testimonial1" style="width: 550px">
-                                        <div class="testimonial-img">
-                                            <?php if($_SESSION['log']['Dp'] != NULL) { ?>
-                                            <img src="<?php echo $_SESSION['log']['Dp'] ?>">
-                                            <?php } ?>
+                    <div class="service-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="appointment-form" action="editprofile.php" method="post">
+                                    <div class="row">
+                                        <div class="single-testimonial1">
+                                            <div class="testimonial-img">
+                                                <?php if ($_SESSION['log']['Dp'] != NULL) { ?>
+                                                    <img src="<?= $_SESSION['log']['Dp'] ?>">
+                                                <?php } ?>
+                                            </div>
+                                            <div class="testimonial-cotent">
+                                                <p class="testimonial-parg">To Upload your Profile Picture go to Update
+                                                    Profile</p>
+                                            </div>
                                         </div>
-                                        <div class="testimonial-cotent">
-                                            <p class="testimonial-parg">To Upload your Profile Picture go to Update Profile</p>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2"></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <label class="control-label">Name <span
+                                                    class="required">*</span></label>
+                                            <input type="text" class="wp-form-control wpcf7-text"
+                                                   value="<?= $_SESSION['log']['Name'] ?>" readonly>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2"></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <label class="control-label">Email <span
+                                                    class="required">*</span></label>
+                                            <input type="email" class="wp-form-control wpcf7-email"
+                                                   value="<?= $_SESSION['log']['Email'] ?>" readonly>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2"></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <label class="control-label">Date Of Birth <span
+                                                    class="required">*</span></label>
+                                            <input type="email" class="wp-form-control wpcf7-email"
+                                                   value="<?= $_SESSION['log']['Dob'] ?>" readonly>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2"></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <label class="control-label">Select Gender <span
+                                                    class="required">*</span></label>
+                                            <input type="email" class="wp-form-control wpcf7-email"
+                                                   value="<?= $_SESSION['log']['Gender'] ?>" readonly>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2"></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <label class="control-label">Address <span
+                                                    class="required">*</span></label>
+                                            <input type="text" class="wp-form-control wpcf7-email"
+                                                   value="<?= $_SESSION['log']['Address'] ?>" readonly>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2"></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <label class="control-label">Phone <span
+                                                    class="required">*</span></label>
+                                            <input type="number" class="wp-form-control wpcf7-text"
+                                                   value="<?= $_SESSION['log']['Phone'] ?>" readonly>
+                                        </div>
+                                        <div class="col-lg-2 col-md-2"></div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2 col-md-2"></div>
+                                        <div class="col-lg-8 col-md-8 col-sm-6">
+                                            <button class="wpcf7-submit button--itzel" name="ok" type="submit">
+                                                <i class="button__icon fa fa-share"></i><span>Update Profile</span>
+                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="control-label">Your name <span class="required">*</span></label>
-                                        <input type="text" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Name'] ?>" readonly>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="control-label">Your Email <span class="required">*</span></label>
-                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Email'] ?>" readonly>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="control-label">Your DOB <span class="required">*</span></label>
-                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Dob'] ?>" readonly>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="control-label">Your Gender <span class="required">*</span></label>
-                                        <input type="email" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Gender'] ?>" readonly>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="control-label">Your Address <span class="required">*</span></label>
-                                        <input type="text" class="wp-form-control wpcf7-email" value="<?php echo $_SESSION['log']['Address'] ?>" readonly>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6">
-                                        <label class="control-label">Your Phone <span class="required">*</span></label>
-                                        <input type="number" class="wp-form-control wpcf7-text" value="<?php echo $_SESSION['log']['Phoneno'] ?>" readonly>
-                                    </div>
-                                </div>
-                                <button class="wpcf7-submit button--itzel" type="submit"><i class="button__icon fa fa-share"></i><span>Update Profile</span></button>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,28 +123,13 @@
 </section>
 
 <!--=========== BEGAIN Counter SECTION ================-->
-<?php include('counter.php') ?>
+<?php include('src/counter.php') ?>
 <!--=========== End Counter SECTION ================-->
 
 <!--=========== Start Footer SECTION ================-->
-<?php include('footer.php') ?>
+<?php include('src/footer.php') ?>
 <!--=========== End Footer SECTION ================-->
 
-<!-- jQuery Library  -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap default js -->
-<script src="js/bootstrap.min.js"></script>
-
-<!-- slick slider -->
-<script src="js/slick.min.js"></script>
-<script type="text/javascript" src="js/modernizr.custom.79639.js"></script>
-
-<!-- counter -->
-<script src="js/waypoints.min.js"></script>
-<script src="js/jquery.counterup.min.js"></script>
-
-<!-- Custom JS -->
-<script src="js/custom.js"></script>
+<?php include('src/incfooter.php') ?>
 </body>
 </html>

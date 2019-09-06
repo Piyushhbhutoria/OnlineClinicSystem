@@ -16,7 +16,9 @@
                                         <img src="images/patients-3.jpg" alt="img">
                                     </div>
                                     <div class="testimonial-cotent">
-                                        <p class="testimonial-parg">I had an incredible support system…my family, my husband, my friends, and my neighbors. Everyone came together in a way that I never would have expected.</p>
+                                        <p class="testimonial-parg">I had an incredible support system…my family, my
+                                            husband, my friends, and my neighbors. Everyone came together in a way that
+                                            I never would have expected.</p>
                                     </div>
                                 </div>
                             </li>
@@ -26,7 +28,8 @@
                                         <img src="images/patients-1.jpg" alt="img">
                                     </div>
                                     <div class="testimonial-cotent">
-                                        <p class="testimonial-parg">It made all the difference to hand myself over to the SPA Pathcare team with total and unconditional trust.</p>
+                                        <p class="testimonial-parg">It made all the difference to hand myself over to
+                                            the SPA Pathcare team with total and unconditional trust.</p>
                                     </div>
                                 </div>
                             </li>
@@ -36,7 +39,9 @@
                                         <img src="images/patients-2.jpg" alt="img">
                                     </div>
                                     <div class="testimonial-cotent">
-                                        <p class="testimonial-parg">I am so thankful that I received a quick, accurate diagnosis. This is not a common condition—things could have turned out very differently for me.</p>
+                                        <p class="testimonial-parg">I am so thankful that I received a quick, accurate
+                                            diagnosis. This is not a common condition—things could have turned out very
+                                            differently for me.</p>
                                     </div>
                                 </div>
                             </li>

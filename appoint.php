@@ -1,33 +1,33 @@
 <?php
-include("config.php");
+include("src/config.php");
 session_start();
-if(isset($_SESSION['log']) == "") {
-    ?>
+if (isset($_SESSION['log']) == "") {
+    echo '
     <script>
-        alert ("Sign in First");
-        window.location.href = "Signin.php";
+      alert("Sign in First");
     </script>
-    <?php
+    ';
+    header("location:signin.php");
 } else {
     $id = $_SESSION['log']['Id'];
     $test = $_POST['test'];
     $appdate = $_POST['appdate1'];
     $apptime = $_POST['apptime1'];
-    $qry = mysqli_query($con,"INSERT INTO test_appointment (Test_name,Test_time,Test_date,Users_id,Report) VALUES ('$test','$apptime','$appdate','$id','')");
-    if($qry) {
-        ?>
+    $qry = mysqli_query($con, "INSERT INTO test_appointment (Test_name,Test_time,Test_date,Users_id,Report) VALUES ('$test','$apptime','$appdate','$id','')");
+    if ($qry) {
+        echo '
         <script>
-            alert ("Appointment set Sucessfully");
-            window.location.href = "appointments.php";
+          alert("Appointment set Sucessfully");
         </script>
-        <?php
+        ';
+        header("location:appointments.php");
     } else {
-        ?>
+        echo '
         <script>
-            alert ("Appointment set Unsucessful RETRY!");
-            window.location.href = "index.php";
+          alert("Appointment set Unsucessful RETRY!");
         </script>
-        <?php
+        ';
+        header("location:index.php");
     }
 }
 ?>

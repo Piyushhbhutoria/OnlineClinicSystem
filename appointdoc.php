@@ -1,34 +1,34 @@
 <?php
-include('config.php');
+include('src/config.php');
 session_start();
-if(isset($_SESSION['log']) == "") {
-    ?>
+if (isset($_SESSION['log']) == "") {
+    echo '
     <script>
-        alert ("Sign in First");
-        window.location.href = "Signin.php";
+      alert("Sign in First");
     </script>
-    <?php
+    ';
+    header("location:signin.php");
 } else {
     $id = $_SESSION['log']['Id'];
     $name = $_SESSION['log']['Name'];
     $doc = $_POST['docname'];
     $appdate = $_POST['appdate'];
     $apptime = $_POST['apptime'];
-    $qry = mysqli_query($con,"INSERT INTO doctor_app (Doc_name,App_date,App_time,Users_id,User_name,Report,Status) VALUES ('$doc','$appdate','$apptime','$id','$name','','Accepted')");
-    if($qry) {
-        ?>
+    $qry = mysqli_query($con, "INSERT INTO doctor_app (Doc_name,App_date,App_time,Users_id,User_name,Report,Status) VALUES ('$doc','$appdate','$apptime','$id','$name','','Accepted')");
+    if ($qry) {
+        echo '
         <script>
-            alert ("Appointment set Sucessfully");
-            window.location.href = "appointments.php";
+          alert("Appointment set Sucessfully");
         </script>
-        <?php
+        ';
+        header("location:appointments.php");
     } else {
-        ?>
+        echo '
         <script>
-            alert ("Appointment set Unsucessful RETRY!");
-            window.location.href = "index.php";
+          alert("Appointment set Unsucessful RETRY!");
         </script>
-        <?php
+        ';
+        header("location:index.php");
     }
 }
 ?>
