@@ -15,7 +15,9 @@
                                     <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                         <figure>
                                             <img src="images/doctor-1.jpg" />
-                                            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                            <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                <path d="M 180,160 0,218 0,0 180,0 z" />
+                                            </svg>
                                             <figcaption>
                                                 <h2>Dr. Yvonne Cadiline</h2>
                                                 <p>Pediatric Clinic</p>
@@ -37,7 +39,9 @@
                                         <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                             <figure>
                                                 <img src="images/doctor-2.jpg" />
-                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                    <path d="M 180,160 0,218 0,0 180,0 z" />
+                                                </svg>
                                                 <figcaption>
                                                     <h2>DR. Jack Johnson</h2>
                                                     <p>Rehabilitation Therapy</p>
@@ -60,7 +64,9 @@
                                         <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                             <figure>
                                                 <img src="images/doctor-3.jpg" />
-                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                    <path d="M 180,160 0,218 0,0 180,0 z" />
+                                                </svg>
                                                 <figcaption>
                                                     <h2>Dr. Vanessa Smouic</h2>
                                                     <p>Cardiac Clinic</p>
@@ -83,7 +89,9 @@
                                         <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                             <figure>
                                                 <img src="images/doctor-5.jpg" />
-                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                    <path d="M 180,160 0,218 0,0 180,0 z" />
+                                                </svg>
                                                 <figcaption>
                                                     <h2>Dr. David Gresshoff</h2>
                                                     <p>Laryngological Clinic</p>
@@ -105,7 +113,9 @@
                                     <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                         <figure>
                                             <img src="images/doctor-1.jpg" />
-                                            <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                            <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                <path d="M 180,160 0,218 0,0 180,0 z" />
+                                            </svg>
                                             <figcaption>
                                                 <h2>Dr. Yvonne Cadiline</h2>
                                                 <p>Pediatric Clinic</p>
@@ -127,7 +137,9 @@
                                         <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                             <figure>
                                                 <img src="images/doctor-2.jpg" />
-                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                    <path d="M 180,160 0,218 0,0 180,0 z" />
+                                                </svg>
                                                 <figcaption>
                                                     <h2>DR. Jack Johnson</h2>
                                                     <p>Rehabilitation Therapy</p>
@@ -150,7 +162,9 @@
                                         <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                             <figure>
                                                 <img src="images/doctor-3.jpg" />
-                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                    <path d="M 180,160 0,218 0,0 180,0 z" />
+                                                </svg>
                                                 <figcaption>
                                                     <h2>Dr. Vanessa Smouic</h2>
                                                     <p>Cardiac Clinic</p>
@@ -173,7 +187,9 @@
                                         <a class="tdoctor" href="#" data-path-hover="m 180,34.57627 -180,0 L 0,0 180,0 z">
                                             <figure>
                                                 <img src="images/doctor-5.jpg" />
-                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none"><path d="M 180,160 0,218 0,0 180,0 z"/></svg>
+                                                <svg viewBox="0 0 180 320" preserveAspectRatio="none">
+                                                    <path d="M 180,160 0,218 0,0 180,0 z" />
+                                                </svg>
                                                 <figcaption>
                                                     <h2>Dr. David Gresshoff</h2>
                                                     <p>Laryngological Clinic</p>

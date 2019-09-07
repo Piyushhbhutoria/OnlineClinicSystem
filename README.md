@@ -43,3 +43,7 @@ Change credentials in config.php.
 
 Open PHPmyadmin create a database named project.  
 Import the project.sql file in database folder.
+
+# License
+
+![GitHub](https://img.shields.io/github/license/Piyushhbhutoria/OnlineClinicSystem?style=for-the-badge) 

@@ -3,34 +3,26 @@
 <html lang="en">
 
 <head>
-    <title>SPA Pathcare : Features</title>
+    <title>SPA Pathcare : About Us</title>
     <?php include('src/head.php') ?>
 </head>
 
 <body>
-
+    
     <?php include('src/preload.php') ?>
     <!--=========== BEGIN HEADER SECTION ================-->
     <?php include('src/header.php') ?>
     <!--=========== END HEADER SECTION ================-->
 
-    <?php echo youAreHere("Features") ?>
+    <?php echo youAreHere("About Us") ?>
 
-    <!--=========== BEGIN Service SECTION ================-->
-    <?php include('src/services.php') ?>
-    <!--=========== End Service SECTION ================-->
-
-    <!--=========== BEGAIN Why Choose Us SECTION ================-->
-    <?php include('src/whychoose.php') ?>
-    <!--=========== END Why Choose Us SECTION ================-->
+    <!--=========== BEGAIN Doctors SECTION ================-->
+    <?php include('src/meet_our_doc.php') ?>
+    <!--=========== End Doctors SECTION ================-->
 
     <!--=========== BEGAIN Counter SECTION ================-->
     <?php include('src/counter.php') ?>
     <!--=========== End Counter SECTION ================-->
-
-    <!--=========== BEGAIN Extra Feature SECTION ================-->
-    <?php include('src/extrafeature.php') ?>
-    <!--=========== End Extra Feature SECTION ================-->
 
     <!--=========== Start Footer SECTION ================-->
     <?php include('src/footer.php') ?>

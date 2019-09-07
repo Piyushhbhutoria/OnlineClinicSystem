@@ -9,7 +9,9 @@
                             <h2>About Us</h2>
                             <div class="line"></div>
                         </div>
-                        <p>A voluntary, acute-care taking pathology, SPA Pathcare endeavors to provide excellent health care services in a compassionate and humane manner to the people who live and work in Kolkata and its surrounding areas.</p>
+                        <p>A voluntary, acute-care taking pathology, SPA Pathcare endeavors to provide excellent health
+                            care services in a compassionate and humane manner to the people who live and work in
+                            Kolkata and its surrounding areas.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3">
@@ -44,8 +46,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3" style="margin-left: 12%>
-          <div class="single-footer-widget">
-                <div class="section-heading">
+          <div class=" single-footer-widget ">
+                <div class=" section-heading">
                     <h2>Contact Info</h2>
                     <div class="line"></div>
                 </div>
