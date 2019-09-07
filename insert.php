@@ -1,40 +1,248 @@
-<?php include('src/config.php'); ?>
-    <h1>Insert New</h1>
-    <table>
-        <form method="post">
-            <tr>
-                <td>Test Name</td>
-                <td><input type="text" name="testname"></td>
-            </tr>
-            <tr>
-                <td>Test Fee</td>
-                <td><input type="number" name="testfee"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" name="btn" value="Insert"></td>
-            </tr>
-        </form>
-    </table>
-
 <?php
-if (isset($_POST['btn'])) {
-    $testname = $_POST['testname'];
-    $testfee = $_POST['testfee'];
-    $res = mysqli_query($con, "INSERT INTO test (test_name,test_cost) VALUES ('$testname','$testfee')");
-    if ($res == 1) {
-        ?>
-        <script>
-          alert("Insertion Sucesssful");
-          window.location.href = "update.php";
-        </script>
-        <?php
-    } else {
-        ?>
-        <script>
-          alert("Insertion Unucesssful");
-          window.location.href = "update.php";
-        </script>
-        <?php
-    }
-}
+include('src/config.php');
+include('src/functions.php');
 ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>SPA Pathcare : Insert</title>
+    <?php include('src/head.php') ?>
+</head>
+
+<body>
+
+    <?php include('src/preload.php') ?>
+    <!--=========== BEGIN HEADER SECTION ================-->
+    <?php include('src/header.php') ?>
+    <!--=========== END HEADER SECTION ================-->
+
+    <?php
+    echo youAreHere("Insert");
+    include('src/session_check.php');
+
+    $data = $_GET['data'];
+    if (isset($_POST['btn'])) {
+        if ($data == 'test') {
+            $testname = $_POST['testname'];
+            $testfee = $_POST['testfee'];
+            $res = mysqli_query($con, "INSERT INTO test (test_name,test_cost) VALUES ('$testname','$testfee')");
+            if ($res == 1) {
+                echo '
+            <script>
+              alert("Insertion Sucesssful");
+              window.location.href = "update.php";
+            </script>
+            ';
+            } else {
+                echo '
+            <script>
+              alert("Insertion Unucesssful");
+            </script>
+            ';
+            }
+        } else if ($data == 'doctor') {
+            $name = $_POST['fname'] . " " . $_POST['lname'];
+            $email = $_POST['mail'];
+            $dob = $_POST['dob'];
+            $gnd = $_POST['gnd'];
+            $addr = $_POST['addr'];
+            $phno = $_POST['phno'];
+            $pwd = $_POST['pwd'];
+            $fee = $_POST['fee'];
+            $dep = $_POST['category'];
+            $qry = mysqli_query($con, "INSERT INTO logins (email, password, type) VALUES ('$fname'.'$lname', '$pwd', 'doctor')");
+            $res1 = mysqli_query($con, "INSERT INTO doctor (name, email, gender, address, phone, fee, department, picture) VALUES ('$name','$email', '$gnd', '$addr', '$phno', '$fee', '$dep','')");
+            if ($res1) {
+                echo '
+            <script>
+              alert("Added Sucessfully");
+              window.location.href = "update.php";
+            </script>
+            ';
+            } else {
+                echo '
+            <script>
+              alert("Add Unsucessful");
+            </script>
+            ';
+            }
+        }
+    }
+    if ($data == 'test') {
+        ?>
+        <section id="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="service-area">
+                            <!-- Start Service Title -->
+                            <div class="section-heading">
+                                <h2>Add Test</h2>
+                                <div class="line"></div>
+                            </div>
+                            <div class="service-content">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <form class="appointment-form" method="post">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Name <span class="required">*</span></label>
+                                                    <input type="text" class="wp-form-control wpcf7-text" name="testname" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Fees <span class="required">*</span></label>
+                                                    <input type="number" class="wp-form-control wpcf7-text" name="testfee" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <button class="wpcf7-submit button--itzel" name="btn" type="submit">
+                                                        <i class="button__icon fa fa-share"></i><span>Add</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php
+    } else if ($data == 'doctor') {
+        ?>
+        <section id="service">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="service-area">
+                            <!-- Start Service Title -->
+                            <div class="section-heading">
+                                <h2>Add Doctor</h2>
+                                <div class="line"></div>
+                            </div>
+                            <div class="service-content">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <form class="appointment-form" method="post">
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                                    <label class="control-label">First name <span class="required">*</span>
+                                                    </label>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="First name" name="fname" required pattern="[A-Za-z-0-9]+">
+                                                </div>
+                                                <div class="col-lg-4 col-md-4 col-sm-6">
+                                                    <label class="control-label">Last name <span class="required">*</span>
+                                                    </label>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Last name" name="lname" required pattern="[A-Za-z-0-9]+">
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Email <span class="required">*</span></label>
+                                                    <input type="email" class="wp-form-control wpcf7-text" placeholder="Email address" name="mail" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Date of Birth <span class="required">*</span></label>
+                                                    <input type="date" class="wp-form-control wpcf7-text" placeholder="dd/mm/yy" max="<?= date("Y-m-d") ?>" name="dob" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Gender <span class="required">*</span></label>
+                                                    <select class="wp-form-control wpcf7-text" name="gnd" required>
+                                                        <option value="">Select</option>
+                                                        <option value="Male">Male</option>
+                                                        <option value="Female">Female</option>
+                                                    </select>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Address <span class="required">*</span></label>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Address" name="addr" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Phone <span class="required">*</span></label>
+                                                    <input type="number" class="wp-form-control wpcf7-text" placeholder="Phone No" name="phno" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Password <span class="required">*</span></label>
+                                                    <input type="password" class="wp-form-control wpcf7-text" placeholder="Password" name="pwd" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Fees <span class="required">*</span></label>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Fees" name="fee" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <label class="control-label">Category <span class="required">*</span></label>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Category" name="category" required>
+                                                </div>
+                                                <div class="col-lg-2 col-md-2"></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-2 col-md-2"></div>
+                                                <div class="col-lg-8 col-md-8 col-sm-6">
+                                                    <button class="wpcf7-submit button--itzel" name="ok" type="submit">
+                                                        <i class="button__icon fa fa-share"></i><span>Add</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <?php
+    }
+    ?>
+
+    <!--=========== Start Footer SECTION ================-->
+    <?php include('src/footer.php') ?>
+    <!--=========== End Footer SECTION ================-->
+
+    <?php include('src/incfooter.php') ?>
+</body>
+
+</html>

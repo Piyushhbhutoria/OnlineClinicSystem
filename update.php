@@ -4,163 +4,129 @@ include('src/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>SPA Pathcare : Update</title>
     <?php include('src/head.php') ?>
 </head>
+
 <body>
 
-<?php include('src/preload.php') ?>
-<!--=========== BEGIN HEADER SECTION ================-->
-<?php include('src/header.php') ?>
-<!--=========== END HEADER SECTION ================-->
+    <?php include('src/preload.php') ?>
+    <!--=========== BEGIN HEADER SECTION ================-->
+    <?php include('src/header.php') ?>
+    <!--=========== END HEADER SECTION ================-->
 
-<?php
-include ('src/session_check.php');
-echo youAreHere("Update");
-?>
+    <?php
+    include('src/session_check.php');
+    echo youAreHere("Update");
+    ?>
 
-<section id="topFeature">
-    <div class="row">
-        <div class="col-lg-4 col-md-4">
+    <section id="service">
+        <div class="container">
             <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-flask"></span>
-                    <h3>Test Name</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM test");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <?= $row['test_name'] ?>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
+                <div class="col-lg-12 col-md-12">
+                    <div class="service-area">
+                        <!-- Start Service Title -->
+                        <div class="section-heading">
+                            <h2>Test</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="service-content">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Test</th>
+                                                <th>Fees</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $sql = mysqli_query($con, "SELECT * FROM test");
+                                            while ($row = mysqli_fetch_array($sql)) {
+                                                ?>
+                                                <tr>
+                                                    <th scope="row"><?= $row['test_name'] ?></th>
+                                                    <td><?= $row['test_cost'] ?></td>
+                                                    <td><a href="edit.php?data=test&id=<?= $row['id']; ?>">Edit</a></td>
+                                                    <td><a href="delete.php?data=test&id=<?= $row['id']; ?>">Delete</a></td>
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <div class="readmore_area">
+                                        <a data-hover="Add New" href="insert.php?data=test"><span>Add New</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-clock-o"></span>
-                    <h3>Update</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM test");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <a href="edit.php?data=test&id=<?= $row['id']; ?>">Edit</a>
-                                &nbsp;
-                                <a href="delete.php?data=test&id=<?= $row['id']; ?>">Delete</a>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-hospital-o"></span>
-                    <h3>Test Fees</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM test");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <?= $row['test_cost'] ?>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<h4 align="center"><a href="insert.php">Insert New</a></h4>
-<section id="topFeature">
-    <div class="row">
-        <div class="col-lg-4 col-md-4">
+    <section id="service">
+        <div class="container">
             <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-flask"></span>
-                    <h3>Doctor Name</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM doctor");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <?= $row['Name'] ?>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
+                <div class="col-lg-12 col-md-12">
+                    <div class="service-area">
+                        <!-- Start Service Title -->
+                        <div class="section-heading">
+                            <h2>Doctor</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="service-content">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Doctor</th>
+                                                <th>Fees</th>
+                                                <th>Edit</th>
+                                                <th>Delete</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $sql = mysqli_query($con, "SELECT * FROM doctor");
+                                            while ($row = mysqli_fetch_array($sql)) {
+                                                ?>
+                                                <tr>
+                                                    <th scope="row"><?= $row['Name'] ?></th>
+                                                    <td><?= $row['Fees'] ?></td>
+                                                    <td><a href="edit.php?data=doctor&id=<?= $row['Id']; ?>">Edit</a></td>
+                                                    <td><a href="delete.php?data=doctor&id=<?= $row['Id']; ?>">Delete</a></td>
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                    <div class="readmore_area">
+                                        <a data-hover="Add New" href="insert.php?data=doctor"><span>Add New</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-clock-o"></span>
-                    <h3>Update</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM doctor");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <a href="edit.php?data=doctor&id=<?= $row['id']; ?>">Edit</a>
-                                &nbsp;
-                                <a href="delete.php?data=doctor&id=<?= $row['id']; ?>">Delete</a>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-hospital-o"></span>
-                    <h3>Fees</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM doctor");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <?= $row['Fees'] ?>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<h4 align="center"><a href="insertdoc.php">Insert New</a></h4>
+    <!--=========== Start Footer SECTION ================-->
+    <?php include('src/footer.php') ?>
+    <!--=========== End Footer SECTION ================-->
 
-<!--=========== Start Footer SECTION ================-->
-<?php include('src/footer.php') ?>
-<!--=========== End Footer SECTION ================-->
-
-<?php include('src/incfooter.php') ?>
+    <?php include('src/incfooter.php') ?>
 </body>
+
 </html>

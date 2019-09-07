@@ -4,171 +4,125 @@ include('src/functions.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>SPA Pathcare : Upload</title>
     <?php include('src/head.php') ?>
 </head>
+
 <body>
 
-<?php include('src/preload.php') ?>
-<!--=========== BEGIN HEADER SECTION ================-->
-<?php include('src/header.php') ?>
-<!--=========== END HEADER SECTION ================-->
+    <?php include('src/preload.php') ?>
+    <!--=========== BEGIN HEADER SECTION ================-->
+    <?php include('src/header.php') ?>
+    <!--=========== END HEADER SECTION ================-->
 
-<?php
-include ('src/session_check.php');
-echo youAreHere("Upload");
-?>
+    <?php
+    include('src/session_check.php');
+    echo youAreHere("Upload");
+    ?>
 
-<section id="topFeature">
-    <div class="row">
-        <div class="col-lg-4 col-md-4">
+    <section id="service">
+        <div class="container">
             <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-flask"></span>
-                    <h3>Test Appointment</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM test_appointment ");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li><?php echo $row['Test_name'] ?></li>
-                            <li>&nbsp;</li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
+                <div class="col-lg-12 col-md-12">
+                    <div class="service-area">
+                        <!-- Start Service Title -->
+                        <div class="section-heading">
+                            <h2>Test Appointment</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="service-content">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Test</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                <th>Upload</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $sql = mysqli_query($con, "SELECT * FROM test_appointment ");
+                                            while ($row = mysqli_fetch_array($sql)) {
+                                                ?>
+                                                <tr>
+                                                    <th scope="row"><?= $row['Test_name'] ?></th>
+                                                    <td><?= $row['Test_date'] ?></td>
+                                                    <td><?= $row['Test_time'] ?></td>
+                                                    <td><a href="uploadcode.php?data=test&id=<?= $row['Id'] ?>">Upload</a></td>
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-clock-o"></span>
-                    <h3>Appointment Details</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM test_appointment ");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <span>Date</span>
-                                <div><?php echo $row['Test_date'] ?></div>
-                            </li>
-                            <li>
-                                <span>Time</span>
-                                <div><?php echo $row['Test_time'] ?></div>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-hospital-o"></span>
-                    <h3>Report</h3>
-                    <?php
-                    $sql = mysqli_query($con, "SELECT * FROM test_appointment ");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <a href="uploadcode1.php?id=<?php echo $row['Id'] ?>">Upload</a>
-                            </li>
-                            <li>&nbsp;</li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="topFeature">
-    <div class="row">
-        <div class="col-lg-4 col-md-4">
+    <section id="service">
+        <div class="container">
             <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-flask"></span>
-                    <h3>Doctor Appointment</h3>
-                    <?php
-                    $status = "Rejected";
-                    $sql = mysqli_query($con, "SELECT * FROM doctor_app WHERE Status!='$status' ");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <?php echo $row['Doc_name'] ?>
-                            </li>
-                            <li>&nbsp;</li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
+                <div class="col-lg-12 col-md-12">
+                    <div class="service-area">
+                        <!-- Start Service Title -->
+                        <div class="section-heading">
+                            <h2>Doctor Appointment</h2>
+                            <div class="line"></div>
+                        </div>
+                        <div class="service-content">
+                            <div class="row">
+                                <div class="col-lg-12 col-md-12">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Doctor</th>
+                                                <th>Patient</th>
+                                                <th>Date</th>
+                                                <th>Time</th>
+                                                <th>Upload</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php
+                                            $sql = mysqli_query($con, "SELECT * FROM doctor_app");
+                                            while ($row = mysqli_fetch_array($sql)) {
+                                                ?>
+                                                <tr>
+                                                    <th scope="row"><?= $row['Doc_name'] ?></th>
+                                                    <td><?= $row['User_name'] ?></td>
+                                                    <td><?= $row['App_date'] ?></td>
+                                                    <td><?= $row['App_time'] ?></td>
+                                                    <td><a href="uploadcode.php?data=doctor&id=<?= $row['Id'] ?>">Upload</a></td>
+                                                </tr>
+                                            <?php
+                                            }
+                                            ?>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-clock-o"></span>
-                    <h3>Appointment Details</h3>
-                    <?php
-                    $status = "Rejected";
-                    $sql = mysqli_query($con, "SELECT * FROM doctor_app WHERE Status!='$status' ");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <span>Date</span>
-                                <div><?php echo $row['App_date'] ?></div>
-                            </li>
-                            <li>
-                                <span>Time</span>
-                                <div><?php echo $row['App_time'] ?></div>
-                            </li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-4 col-md-4">
-            <div class="row">
-                <div class="single-top-feature opening-hours">
-                    <span class="fa fa-hospital-o"></span>
-                    <h3>Report</h3>
-                    <?php
-                    $status = "Rejected";
-                    $sql = mysqli_query($con, "SELECT * FROM doctor_app WHERE Status!='$status' ");
-                    while ($row = mysqli_fetch_array($sql)) {
-                        ?>
-                        <ul class="opening-table">
-                            <li>
-                                <a href="uploadcode.php?id=<?php echo $row['Id'] ?>">Upload</a>
-                            </li>
-                            <li>&nbsp;</li>
-                        </ul>
-                        <?php
-                    }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!--=========== Start Footer SECTION ================-->
-<?php include('src/footer.php') ?>
-<!--=========== End Footer SECTION ================-->
+    <!--=========== Start Footer SECTION ================-->
+    <?php include('src/footer.php') ?>
+    <!--=========== End Footer SECTION ================-->
 
-<?php include('src/incfooter.php') ?>
+    <?php include('src/incfooter.php') ?>
 </body>
+
 </html>

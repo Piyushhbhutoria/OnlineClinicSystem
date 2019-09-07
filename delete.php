@@ -3,7 +3,7 @@ include('src/config.php');
 $id = $_GET['id'];
 $data = $_GET['data'];
 if ($data == 'doctor') {
-    $res = mysqli_query($con, "DELETE FROM test WHERE id = '$id'");
+    $res = mysqli_query($con, "DELETE FROM doctor WHERE id = '$id'");
 } else if ($data == 'test') {
     $res = mysqli_query($con, "DELETE FROM test WHERE id = '$id'");
 }

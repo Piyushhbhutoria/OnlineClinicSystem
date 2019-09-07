@@ -1,6 +1,7 @@
 <?php include('src/functions.php') ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>SpA Pathcare : Gallery</title>
     <?php include('src/head.php') ?>
@@ -26,65 +27,50 @@
                         </div>
                         <div class="row">
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/1440425526904.jpg" itemprop="contentUrl"
-                                   data-size="1024x1024">
-                                    <img src="images/gallery/1440425526904.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/1440425526904.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/1440425526904.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/cbm2.jpg" itemprop="contentUrl"
-                                   data-size="1024x1024">
-                                    <img src="images/gallery/cbm2.jpg" itemprop="thumbnail" alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/cbm2.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/cbm2.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/HCNOCTN442-IMS-en_AA.png"
-                                   itemprop="contentUrl" data-size="1024x683">
-                                    <img src="images/gallery/HCNOCTN442-IMS-en_AA.png" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/HCNOCTN442-IMS-en_AA.png" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="images/gallery/HCNOCTN442-IMS-en_AA.png" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/head-pathology.jpg" itemprop="contentUrl"
-                                   data-size="1024x768">
-                                    <img src="images/gallery/head-pathology.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/head-pathology.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="images/gallery/head-pathology.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/istock_000014368289small.jpg"
-                                   itemprop="contentUrl" data-size="1024x1024">
-                                    <img src="images/gallery/istock_000014368289small.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/istock_000014368289small.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/istock_000014368289small.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/lab test tubes experiment student.jpg"
-                                   itemprop="contentUrl" data-size="1024x1024">
-                                    <img src="images/gallery/lab test tubes experiment student.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/lab test tubes experiment student.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/lab test tubes experiment student.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/new-banner-slp-video1.jpg"
-                                   itemprop="contentUrl" data-size="1024x683">
-                                    <img src="images/gallery/new-banner-slp-video1.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/new-banner-slp-video1.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="images/gallery/new-banner-slp-video1.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/Pathology.png" itemprop="contentUrl"
-                                   data-size="1024x768">
-                                    <img src="images/gallery/Pathology.png" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/Pathology.png" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="images/gallery/Pathology.png" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
@@ -99,67 +85,50 @@
                         </div>
                         <div class="row">
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/cb-spa-clinics.jpg" itemprop="contentUrl"
-                                   data-size="1024x1024">
-                                    <img src="images/gallery/cb-spa-clinics.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/cb-spa-clinics.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/cb-spa-clinics.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/cb-spa-resources.jpg"
-                                   itemprop="contentUrl" data-size="1024x1024">
-                                    <img src="images/gallery/cb-spa-resources.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/cb-spa-resources.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/cb-spa-resources.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/eservice_Diagnosis__Pathology_Pic_1.jpg"
-                                   itemprop="contentUrl" data-size="1024x683">
-                                    <img src="images/gallery/eservice_Diagnosis__Pathology_Pic_1.jpg"
-                                         itemprop="thumbnail" alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/eservice_Diagnosis__Pathology_Pic_1.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="images/gallery/eservice_Diagnosis__Pathology_Pic_1.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/pediatric-pathology.jpg"
-                                   itemprop="contentUrl" data-size="1024x768">
-                                    <img src="images/gallery/pediatric-pathology.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/pediatric-pathology.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="images/gallery/pediatric-pathology.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/Pathology.jpg" itemprop="contentUrl"
-                                   data-size="1024x1024">
-                                    <img src="images/gallery/Pathology.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/Pathology.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/Pathology.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/lab_tech.jpg" itemprop="contentUrl"
-                                   data-size="1024x1024">
-                                    <img src="images/gallery/lab_tech.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/lab_tech.jpg" itemprop="contentUrl" data-size="1024x1024">
+                                    <img src="images/gallery/lab_tech.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam" href="images/gallery/IMG_5454.jpg" itemprop="contentUrl"
-                                   data-size="1024x683">
-                                    <img src="images/gallery/IMG_5454.jpg" itemprop="thumbnail"
-                                         alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/IMG_5454.jpg" itemprop="contentUrl" data-size="1024x683">
+                                    <img src="images/gallery/IMG_5454.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
                             <figure itemprop="associatedMedia" class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-                                <a class="gallery-iteam"
-                                   href="images/gallery/DepartmentofPathology2013-2014-Feature-edit.jpg"
-                                   itemprop="contentUrl" data-size="1024x768">
-                                    <img src="images/gallery/DepartmentofPathology2013-2014-Feature-edit.jpg"
-                                         itemprop="thumbnail" alt="Image description"/>
+                                <a class="gallery-iteam" href="images/gallery/DepartmentofPathology2013-2014-Feature-edit.jpg" itemprop="contentUrl" data-size="1024x768">
+                                    <img src="images/gallery/DepartmentofPathology2013-2014-Feature-edit.jpg" itemprop="thumbnail" alt="Image description" />
                                     <span class="image-effect"></span>
                                 </a>
                             </figure>
@@ -226,4 +195,5 @@
 
 <?php include('src/incfooter.php') ?>
 </body>
+
 </html>

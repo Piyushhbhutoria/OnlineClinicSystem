@@ -46,9 +46,8 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-3" style="margin-left: 12%>
-          <div class=" single-footer-widget
-                ">
-                <div class="section-heading">
+          <div class=" single-footer-widget ">
+                <div class=" section-heading">
                     <h2>Contact Info</h2>
                     <div class="line"></div>
                 </div>
@@ -78,8 +77,7 @@
                         <a href="https://www.facebook.com/imidiotic12"><span class="fa fa-facebook"></span></a>
                         <a href="https://twitter.com/piyushbhutoria9"><span class="fa fa-twitter"></span></a>
                         <a href="https://github.com/Piyushhbhutoria"><span class="fa fa-github"></span></a>
-                        <a href="https://www.linkedin.com/in/piyushh-bhutoria-for-you/"><span
-                                class="fa fa-linkedin"></span></a>
+                        <a href="https://www.linkedin.com/in/piyushh-bhutoria-for-you/"><span class="fa fa-linkedin"></span></a>
                     </div>
                 </div>
             </div>

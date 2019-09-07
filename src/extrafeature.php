@@ -110,8 +110,7 @@
                                 <p>The accuracy of our Various Test results over the different fields has been a result
                                     of the continous experiment carried out by our doctors to help the cause of the
                                     organisation which is to provide you the best possible service.</p>
-                                <img class="img-center" src="images/gallery/eservice_Diagnosis__Pathology_Pic_1.jpg"
-                                     alt="img">
+                                <img class="img-center" src="images/gallery/eservice_Diagnosis__Pathology_Pic_1.jpg" alt="img">
                             </div>
                             <div class="tab-pane fade " id="monitor">
                                 <p>The test conducted by our pathologist are always monitored by senior pathologists so

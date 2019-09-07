@@ -8,7 +8,7 @@
 <meta content="width=device-width, initial-scale=1" name="viewport">
 
 <!-- Favicon -->
-<link href="images/favicon.ico" rel="shortcut icon" type="image/icon"/>
+<link href="images/favicon.ico" rel="shortcut icon" type="image/icon" />
 
 <!-- CSS
 ================================================== -->

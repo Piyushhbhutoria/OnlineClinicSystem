@@ -19,7 +19,11 @@
                     <!--  <a class="navbar-brand" href="index.php"><img src="images/logo.png" alt="logo"></a>   -->
                 </div>
                 <!--/.nav-collapse -->
-                <?php include("menu.php"); ?>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
+                        <?php include("menu.php"); ?>
+                    </ul>
+                </div>
             </div>
         </nav>
     </div>

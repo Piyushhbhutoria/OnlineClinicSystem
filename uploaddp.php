@@ -10,7 +10,7 @@ if ($file_size > 1572864) {
     die('
     <script>
       alert("File Size Exceeded");
-      window.location.href = "edit profile.php";
+      window.location.href = "editprofile.php";
     </script>
     ');
 }
@@ -40,15 +40,15 @@ if ($file_type == "image/jpeg") {
     if ($upload) {
         #save data
         if ($_SESSION['log1'] == "client") {
-            $saveData = mysqli_query($con, "UPDATE user SET Dp='$server_path' WHERE Id='$id' ") or die(mysqli_error());
+            $saveData = mysqli_query($con, "UPDATE user SET Dp='$server_path' WHERE Id='$id' ") or die(mysqli_error($con));
         } else if ($_SESSION['log1'] == "doctor") {
-            $saveData = mysqli_query($con, "UPDATE doctor SET Dp='$server_path' WHERE Id='$id' ") or die(mysqli_error());
+            $saveData = mysqli_query($con, "UPDATE doctor SET Dp='$server_path' WHERE Id='$id' ") or die(mysqli_error($con));
         }
         if ($saveData) {
             echo '
             <script>
               alert("File uploaded successfully");
-              window.location.href = "view profile.php";
+              window.location.href = "viewprofile.php";
             </script>
             ';
         }
@@ -57,7 +57,7 @@ if ($file_type == "image/jpeg") {
     echo '
     <script>
       alert("File type should be .jpg or .jpeg only");
-      window.location.href = "edit profile.php";
+      window.location.href = "editprofile.php";
     </script>
     ';
 }
