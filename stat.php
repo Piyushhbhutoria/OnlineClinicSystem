@@ -52,7 +52,7 @@ include('src/functions.php');
                                                 ?>
                                                 <tr>
                                                     <th scope="row"><?= $row['test_name']; ?></th>
-                                                    <td><? print_r($row2[0]) ?></td>
+                                                    <td><?= $row2[0] ?></td>
                                                 </tr>
                                             <?php
                                             }
