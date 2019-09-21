@@ -48,9 +48,12 @@ include('src/functions.php');
                                             <?php
                                             $sql = mysqli_query($con, "SELECT * FROM test_appointment ");
                                             while ($row = mysqli_fetch_array($sql)) {
+                                                $test = $row['Test_id'];
+                                                $sql2 = mysqli_query($con, "SELECT * FROM test WHERE id='$test' ");
+                                                $row2 = mysqli_fetch_array($sql2);
                                                 ?>
                                                 <tr>
-                                                    <th scope="row"><?= $row['Test_name'] ?></th>
+                                                    <th scope="row"><?= $row2['test_name'] ?></th>
                                                     <td><?= $row['Test_date'] ?></td>
                                                     <td><?= $row['Test_time'] ?></td>
                                                     <td><a href="uploadcode.php?data=test&id=<?= $row['Id'] ?>">Upload</a></td>
@@ -96,10 +99,16 @@ include('src/functions.php');
                                             <?php
                                             $sql = mysqli_query($con, "SELECT * FROM doctor_app");
                                             while ($row = mysqli_fetch_array($sql)) {
+                                                $doc = $row['Doctor_id'];
+                                                $sql2 = mysqli_query($con, "SELECT * FROM doctor WHERE id='$doc' ");
+                                                $row2 = mysqli_fetch_array($sql2);
+                                                $user = $row['Users_id'];
+                                                $sql3 = mysqli_query($con, "SELECT * FROM client WHERE Id='$user' ");
+                                                $row3 = mysqli_fetch_array($sql3);
                                                 ?>
                                                 <tr>
-                                                    <th scope="row"><?= $row['Doc_name'] ?></th>
-                                                    <td><?= $row['User_name'] ?></td>
+                                                    <th scope="row"><?= $row2['Name'] ?></th>
+                                                    <td><?= $row3['Name'] ?></td>
                                                     <td><?= $row['App_date'] ?></td>
                                                     <td><?= $row['App_time'] ?></td>
                                                     <td><a href="uploadcode.php?data=doctor&id=<?= $row['Id'] ?>">Upload</a></td>

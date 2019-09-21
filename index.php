@@ -34,41 +34,43 @@
                 if ($type == 'test') {
                     $test = $_POST['test'];
                     $appdate = $_POST['appdate1'];
-                    $apptime = $_POST['apptime1'];
-                    $qry = mysqli_query($con, "INSERT INTO test_appointment (Test_name,Test_time,Test_date,Users_id,Report) VALUES ('$test','$apptime','$appdate','$id','')");
+                    $apptime = date('H:i:s', strtotime($_POST['apptime1']));
+                    $qry = mysqli_query($con, "INSERT INTO test_appointment (Test_id,Test_time,Test_date,Users_id,Report) VALUES ('$test','$apptime','$appdate','$id','')");
                     if ($qry) {
                         echo '
-                    <script>
-                      alert("Appointment set Sucessfully");
-                      window.location.href = "appointments.php";
-                    </script>
-                    ';
+                        <script>
+                        alert("Appointment set Sucessfully");
+                        window.location.href = "appointments.php";
+                        </script>
+                        ';
                     } else {
+                        // echo "Error: " . mysqli_error($con);
                         echo '
-                    <script>
-                      alert("Appointment set Unsucessful RETRY!");
-                    </script>
-                    ';
+                        <script>
+                        alert("Appointment set Unsucessful RETRY!");
+                        </script>
+                        ';
                     }
                 } else if ($type == 'doctor') {
                     $name = $_SESSION['log']['Name'];
                     $doc = $_POST['docname'];
                     $appdate = $_POST['appdate'];
-                    $apptime = $_POST['apptime'];
-                    $qry = mysqli_query($con, "INSERT INTO doctor_app (Doc_name,App_date,App_time,Users_id,User_name,Report,Status) VALUES ('$doc','$appdate','$apptime','$id','$name','','Accepted')");
+                    $apptime = date('H:i:s', strtotime($_POST['apptime']));
+                    $qry = mysqli_query($con, "INSERT INTO doctor_app (Doctor_id,App_date,App_time,Users_id,User_name,Report,Status) VALUES ('$doc','$appdate','$apptime','$id','$name','','Accepted')");
                     if ($qry) {
                         echo '
-                    <script>
-                      alert("Appointment set Sucessfully");
-                      window.location.href = "appointments.php";
-                    </script>
-                    ';
+                        <script>
+                        alert("Appointment set Sucessfully");
+                        window.location.href = "appointments.php";
+                        </script>
+                        ';
                     } else {
+                        // echo "Error: " . mysqli_error($con);
                         echo '
-                    <script>
-                      alert("Appointment set Unsucessful RETRY!");
-                    </script>
-                    ';
+                        <script>
+                        alert("Appointment set Unsucessful RETRY!");
+                        </script>
+                        ';
                     }
                 }
             }
@@ -153,7 +155,7 @@
                                                         <div class="col-md-6 col-sm-6">
                                                             <label class="control-label">Appointment Time <span class="required">*</span>
                                                             </label>
-                                                            <input type="Time" class="wp-form-control wpcf7-text" placeholder="hh:mm" name="apptime1" required>
+                                                            <input type="time" class="wp-form-control wpcf7-text" placeholder="hh:mm" name="apptime1" required>
                                                         </div>
                                                         <div class="col-md-6 col-sm-6">
                                                             <label class="control-label">Select Test <span class="required">*</span>
@@ -161,7 +163,7 @@
                                                             <?php $sql = mysqli_query($con, "SELECT * FROM test") ?>
                                                             <select class="wp-form-control wpcf7-select" name="test" required>
                                                                 <?php while ($row = mysqli_fetch_array($sql)) { ?>
-                                                                    <option val="<?= $row['test_name']; ?>"><?= $row['test_name']; ?></option>
+                                                                    <option value="<?= $row['id']; ?>"><?= $row['test_name']; ?></option>
                                                                 <?php } ?>
                                                             </select>
                                                         </div>
@@ -199,7 +201,7 @@
                                                             <?php $sql1 = mysqli_query($con, "SELECT * FROM doctor"); ?>
                                                             <select class="wp-form-control wpcf7-select" name="docname" required>
                                                                 <?php while ($row1 = mysqli_fetch_array($sql1)) { ?>
-                                                                    <option val="<?= $row1['Name'] ?>"><?= $row1['Name'] ?></option>
+                                                                    <option value="<?= $row1['Id'] ?>"><?= $row1['Name'] ?></option>
                                                                 <?php } ?>
                                                             </select>
                                                         </div>

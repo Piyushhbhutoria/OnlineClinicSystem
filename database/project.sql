@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.9
+-- version 4.9.0.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Nov 17, 2018 at 12:55 AM
--- Server version: 5.7.21
--- PHP Version: 7.2.4
+-- Host: localhost
+-- Generation Time: Sep 21, 2019 at 10:37 AM
+-- Server version: 10.4.6-MariaDB
+-- PHP Version: 7.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project`
+-- Database: `project2`
 --
 
 -- --------------------------------------------------------
@@ -28,20 +28,18 @@ SET time_zone = "+00:00";
 -- Table structure for table `admin`
 --
 
-DROP TABLE IF EXISTS `admin`;
-CREATE TABLE IF NOT EXISTS `admin` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `admin` (
+  `Id` int(11) NOT NULL,
   `Email` varchar(30) NOT NULL,
-  `Phoneno` varchar(11) NOT NULL,
-  `Password` varchar(30) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `Phone` varchar(11) NOT NULL,
+  `Password` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `admin`
 --
 
-INSERT INTO `admin` (`Id`, `Email`, `Phoneno`, `Password`) VALUES
+INSERT INTO `admin` (`Id`, `Email`, `Phone`, `Password`) VALUES
 (2, 'admin@gmail.com', '9830768030', '1234');
 
 -- --------------------------------------------------------
@@ -50,27 +48,25 @@ INSERT INTO `admin` (`Id`, `Email`, `Phoneno`, `Password`) VALUES
 -- Table structure for table `client`
 --
 
-DROP TABLE IF EXISTS `client`;
-CREATE TABLE IF NOT EXISTS `client` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `client` (
+  `Id` int(11) NOT NULL,
   `Name` varchar(40) NOT NULL,
   `Email` varchar(30) NOT NULL,
   `Dob` date NOT NULL,
   `Gender` varchar(6) NOT NULL,
   `Address` varchar(90) NOT NULL,
-  `Phoneno` varchar(11) NOT NULL,
+  `Phone` varchar(11) NOT NULL,
   `Password` varchar(30) NOT NULL,
-  `Dp` varchar(90) NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+  `Dp` varchar(90) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `client`
 --
 
-INSERT INTO `client` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phoneno`, `Password`, `Dp`) VALUES
-(1, 'kushagra', 'email@gmail.com', '2017-06-30', 'Male', 'anything', '9830768030', '1234', 'clientdp/7729_Jason_Bradburyglass.jpg'),
-(2, 'Saharsh Modi', 'saharsh@gmail.com', '0000-00-00', 'Male', 'something', '9883085934', '1234', '');
+INSERT INTO `client` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phone`, `Password`, `Dp`) VALUES
+(1, 'Piyushh Bhutoria', 'email@gmail.com', '2017-06-30', 'Male', 'anything.', '9830768030', '1234', 'clientdp/7729_Jason_Bradburyglass.jpg'),
+(6, 'Piyushh Bhutoria', 'piyush.bhutoria123@gmail.com', '1998-12-12', 'Male', '152/6 hardutt Rai Chamaria', '9830768030', '1234', 'null');
 
 -- --------------------------------------------------------
 
@@ -78,29 +74,26 @@ INSERT INTO `client` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phonen
 -- Table structure for table `doctor`
 --
 
-DROP TABLE IF EXISTS `doctor`;
-CREATE TABLE IF NOT EXISTS `doctor` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `doctor` (
+  `Id` int(11) NOT NULL,
   `Name` varchar(40) NOT NULL,
   `Email` varchar(30) NOT NULL,
   `Dob` date NOT NULL,
   `Gender` varchar(6) NOT NULL,
   `Address` varchar(90) NOT NULL,
-  `Phoneno` varchar(11) NOT NULL,
+  `Phone` varchar(11) NOT NULL,
   `Password` varchar(30) NOT NULL,
   `Fees` int(11) NOT NULL,
   `Category` varchar(30) NOT NULL,
-  `Dp` text NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `Dp` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phoneno`, `Password`, `Fees`, `Category`, `Dp`) VALUES
-(1, 'Ross Gellar', 'ross@gmail.com', '2017-07-01', 'Male', 'F.R.I.E.N.D.S', '9830768030', '1234', 500, 'Paleantologist', 'docdp/7729_Jason_Bradburyglass.jpg'),
-(3, 'Kushagra Agarwal', 'kushagra@gmail.com', '1999-03-27', 'Male', 'VIT University, Near Katpadi Road', '9568414264', '1234', 500, 'ECG', '');
+INSERT INTO `doctor` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phone`, `Password`, `Fees`, `Category`, `Dp`) VALUES
+(1, 'Ross Gellar', 'ross@gmail.com', '2017-07-01', 'Male', 'F.R.I.E.N.D.S.', '9830768030', '1234', 500, 'Paleantologist', 'docdp/7729_Jason_Bradburyglass.jpg');
 
 -- --------------------------------------------------------
 
@@ -108,25 +101,23 @@ INSERT INTO `doctor` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phonen
 -- Table structure for table `doctor_app`
 --
 
-DROP TABLE IF EXISTS `doctor_app`;
-CREATE TABLE IF NOT EXISTS `doctor_app` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Doc_name` text NOT NULL,
+CREATE TABLE `doctor_app` (
+  `Id` int(11) NOT NULL,
+  `Doctor_id` int(11) NOT NULL,
   `App_date` date NOT NULL,
   `App_time` time NOT NULL,
   `Users_id` int(11) NOT NULL,
-  `User_name` text NOT NULL,
   `Report` text NOT NULL,
-  `Status` text NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+  `Status` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `doctor_app`
 --
 
-INSERT INTO `doctor_app` (`Id`, `Doc_name`, `App_date`, `App_time`, `Users_id`, `User_name`, `Report`, `Status`) VALUES
-(6, 'Kushagra Agarwal', '2019-12-12', '12:00:00', 1, 'kushagra', '', '');
+INSERT INTO `doctor_app` (`Id`, `Doctor_id`, `App_date`, `App_time`, `Users_id`, `Report`, `Status`) VALUES
+(6, 1, '2019-12-12', '12:00:00', 1, '', ''),
+(8, 1, '2019-09-25', '00:12:00', 1, '', 'Accepted');
 
 -- --------------------------------------------------------
 
@@ -134,20 +125,18 @@ INSERT INTO `doctor_app` (`Id`, `Doc_name`, `App_date`, `App_time`, `Users_id`, 
 -- Table structure for table `test`
 --
 
-DROP TABLE IF EXISTS `test`;
-CREATE TABLE IF NOT EXISTS `test` (
-  `id` int(20) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `test` (
+  `id` int(20) NOT NULL,
   `test_name` varchar(50) NOT NULL,
-  `test_cost` int(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=latin1;
+  `test_cost` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `test`
 --
 
 INSERT INTO `test` (`id`, `test_name`, `test_cost`) VALUES
-(1, 'Haemoglobin', 1500),
+(1, 'Haemoglobin', 150),
 (4, 'Allergy', 500),
 (5, ' Diabetes', 800),
 (6, 'Blood Group Test', 200),
@@ -172,16 +161,124 @@ INSERT INTO `test` (`id`, `test_name`, `test_cost`) VALUES
 -- Table structure for table `test_appointment`
 --
 
-DROP TABLE IF EXISTS `test_appointment`;
-CREATE TABLE IF NOT EXISTS `test_appointment` (
-  `Id` int(11) NOT NULL AUTO_INCREMENT,
-  `Test_name` varchar(30) NOT NULL,
+CREATE TABLE `test_appointment` (
+  `Id` int(11) NOT NULL,
+  `Test_id` int(11) NOT NULL,
   `Test_time` time NOT NULL,
   `Test_date` date NOT NULL,
   `Users_id` int(11) NOT NULL,
-  `Report` text NOT NULL,
-  PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+  `Report` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `test_appointment`
+--
+
+INSERT INTO `test_appointment` (`Id`, `Test_id`, `Test_time`, `Test_date`, `Users_id`, `Report`) VALUES
+(4, 5, '12:12:00', '2019-09-12', 1, ''),
+(7, 11, '12:12:00', '2019-09-24', 1, '');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `client`
+--
+ALTER TABLE `client`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `doctor`
+--
+ALTER TABLE `doctor`
+  ADD PRIMARY KEY (`Id`);
+
+--
+-- Indexes for table `doctor_app`
+--
+ALTER TABLE `doctor_app`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `Users_id` (`Users_id`),
+  ADD KEY `Doctor_id` (`Doctor_id`);
+
+--
+-- Indexes for table `test`
+--
+ALTER TABLE `test`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `test_appointment`
+--
+ALTER TABLE `test_appointment`
+  ADD PRIMARY KEY (`Id`),
+  ADD KEY `Users_id` (`Users_id`),
+  ADD KEY `Test_id` (`Test_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `client`
+--
+ALTER TABLE `client`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `doctor`
+--
+ALTER TABLE `doctor`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `doctor_app`
+--
+ALTER TABLE `doctor_app`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `test`
+--
+ALTER TABLE `test`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT for table `test_appointment`
+--
+ALTER TABLE `test_appointment`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `doctor_app`
+--
+ALTER TABLE `doctor_app`
+  ADD CONSTRAINT `doctor_app_ibfk_1` FOREIGN KEY (`Users_id`) REFERENCES `client` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `doctor_app_ibfk_2` FOREIGN KEY (`Doctor_id`) REFERENCES `doctor` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `test_appointment`
+--
+ALTER TABLE `test_appointment`
+  ADD CONSTRAINT `test_appointment_ibfk_1` FOREIGN KEY (`Users_id`) REFERENCES `client` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `test_appointment_ibfk_2` FOREIGN KEY (`Test_id`) REFERENCES `test` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

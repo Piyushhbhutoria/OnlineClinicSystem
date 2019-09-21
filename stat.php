@@ -46,13 +46,13 @@ include('src/functions.php');
                                             <?php
                                             $sql = mysqli_query($con, "SELECT * FROM test");
                                             while ($row = mysqli_fetch_array($sql)) {
-                                                $test = $row['test_name'];
-                                                $count = mysqli_query($con, "SELECT COUNT(Test_name) FROM test_appointment WHERE Test_name='$test' ");
-                                                $row = mysqli_fetch_array($count)
+                                                $test = $row['id'];
+                                                $count = mysqli_query($con, "SELECT COUNT(Test_id) FROM test_appointment WHERE Test_id='$test' ");
+                                                $row2 = mysqli_fetch_array($count)
                                                 ?>
                                                 <tr>
-                                                    <th scope="row"><?= $test ?></th>
-                                                    <td><? print_r($row[0]) ?></td>
+                                                    <th scope="row"><?= $row['test_name']; ?></th>
+                                                    <td><? print_r($row2[0]) ?></td>
                                                 </tr>
                                             <?php
                                             }
