@@ -34,17 +34,17 @@ include('src/functions.php');
             $qry1 = mysqli_query($con, "SELECT * FROM client WHERE Email = '$email'") or die(mysqli_error($con));
             $qry2 = mysqli_num_rows($qry1);
             if ($qry2 == 0) {
-                $qry3 = mysqli_query($con, "INSERT INTO client (Name, Email, Dob, Gender, Address, Phone, Password, Dp) VALUES ('$name', '$email', '$dob', '$gnd', '$addr', '$phno','$pwd', 'null')") or die(mysqli_error($con));
+                $qry3 = mysqli_query($con, "INSERT INTO client (Name, Email, Dob, Gender, Address, Phone, Password) VALUES ('$name', '$email', '$dob', '$gnd', '$addr', '$phno','$pwd')") or die(mysqli_error($con));
                 echo '
-            <script>
-              alert("Registered Successfullly");
-              window.location.href = "signin.php";
-            </script>';
+                <script>
+                alert("Registered Successfullly");
+                window.location.href = "signin.php";
+                </script>';
             } else {
                 echo '
-            <script>
-              alert("Email already Registered");
-            </script>';
+                <script>
+                alert("Email already Registered");
+                </script>';
             }
         } else {
             echo '

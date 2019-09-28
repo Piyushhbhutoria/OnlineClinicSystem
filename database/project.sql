@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 21, 2019 at 10:37 AM
+-- Generation Time: Sep 27, 2019 at 09:38 PM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.8
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `project2`
+-- Database: `project`
 --
 
 -- --------------------------------------------------------
@@ -57,7 +57,7 @@ CREATE TABLE `client` (
   `Address` varchar(90) NOT NULL,
   `Phone` varchar(11) NOT NULL,
   `Password` varchar(30) NOT NULL,
-  `Dp` varchar(90) NOT NULL
+  `Dp` varchar(90) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -66,7 +66,7 @@ CREATE TABLE `client` (
 
 INSERT INTO `client` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phone`, `Password`, `Dp`) VALUES
 (1, 'Piyushh Bhutoria', 'email@gmail.com', '2017-06-30', 'Male', 'anything.', '9830768030', '1234', 'clientdp/7729_Jason_Bradburyglass.jpg'),
-(6, 'Piyushh Bhutoria', 'piyush.bhutoria123@gmail.com', '1998-12-12', 'Male', '152/6 hardutt Rai Chamaria', '9830768030', '1234', 'null');
+(8, 'Piyush Bhutoria', 'piyush.bhutoria123@gmail.com', '1998-12-12', 'Male', '152/6 hardutt Rai Chamaria', '09830768030', '1234', NULL);
 
 -- --------------------------------------------------------
 
@@ -85,7 +85,7 @@ CREATE TABLE `doctor` (
   `Password` varchar(30) NOT NULL,
   `Fees` int(11) NOT NULL,
   `Category` varchar(30) NOT NULL,
-  `Dp` text NOT NULL
+  `Dp` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -93,7 +93,8 @@ CREATE TABLE `doctor` (
 --
 
 INSERT INTO `doctor` (`Id`, `Name`, `Email`, `Dob`, `Gender`, `Address`, `Phone`, `Password`, `Fees`, `Category`, `Dp`) VALUES
-(1, 'Ross Gellar', 'ross@gmail.com', '2017-07-01', 'Male', 'F.R.I.E.N.D.S.', '9830768030', '1234', 500, 'Paleantologist', 'docdp/7729_Jason_Bradburyglass.jpg');
+(1, 'Ross Gellar', 'ross@gmail.com', '2017-07-01', 'Male', 'F.R.I.E.N.D.S.', '9830768030', '1234', 500, 'Paleantologist', 'docdp/7729_Jason_Bradburyglass.jpg'),
+(4, 'Piyush Bhutoria', 'piyush.bhutoria98@gmail.com', '1998-12-12', 'Male', '152/6 hardutt Rai Chamaria, A Block', '09830768030', '123456', 500, 'dentist', NULL);
 
 -- --------------------------------------------------------
 
@@ -236,13 +237,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `doctor_app`
@@ -254,7 +255,7 @@ ALTER TABLE `doctor_app`
 -- AUTO_INCREMENT for table `test`
 --
 ALTER TABLE `test`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `test_appointment`

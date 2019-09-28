@@ -22,26 +22,13 @@ include('src/functions.php');
     include('src/session_check.php');
 
     $data = $_GET['data'];
-    if (isset($_POST['btn'])) {
+    if (isset($_POST['ok'])) {
+        $res;
         if ($data == 'test') {
             $testname = $_POST['testname'];
             $testfee = $_POST['testfee'];
             $res = mysqli_query($con, "INSERT INTO test (test_name,test_cost) VALUES ('$testname','$testfee')");
-            if ($res == 1) {
-                echo '
-            <script>
-              alert("Insertion Sucesssful");
-              window.location.href = "update.php";
-            </script>
-            ';
-            } else {
-                echo '
-            <script>
-              alert("Insertion Unucesssful");
-            </script>
-            ';
-            }
-        } else if ($data == 'doctor') {
+        } else if ($data == "doctor") {
             $name = $_POST['fname'] . " " . $_POST['lname'];
             $email = $_POST['mail'];
             $dob = $_POST['dob'];
@@ -50,23 +37,22 @@ include('src/functions.php');
             $phno = $_POST['phno'];
             $pwd = $_POST['pwd'];
             $fee = $_POST['fee'];
-            $dep = $_POST['category'];
-            $qry = mysqli_query($con, "INSERT INTO logins (email, password, type) VALUES ('$fname'.'$lname', '$pwd', 'doctor')");
-            $res1 = mysqli_query($con, "INSERT INTO doctor (name, email, gender, address, phone, fee, department, picture) VALUES ('$name','$email', '$gnd', '$addr', '$phno', '$fee', '$dep','')");
-            if ($res1) {
-                echo '
-            <script>
-              alert("Added Sucessfully");
-              window.location.href = "update.php";
-            </script>
-            ';
-            } else {
-                echo '
-            <script>
-              alert("Add Unsucessful");
-            </script>
-            ';
-            }
+            $cat = $_POST['category'];
+            $res = mysqli_query($con, "INSERT INTO doctor (Name, Email, Dob, Gender, Address, Phone, Password, Fees, Category) VALUES ('$name','$email','$dob','$gnd','$addr','$phno','$pwd','$fee','$cat')");
+        }
+        if ($res == 1) {
+            echo '
+                <script>
+                alert("Insertion Sucesssful");
+                window.location.href = "update.php";
+                </script>
+                ';
+        } else {
+            echo '
+                <script>
+                alert("Insertion Unucesssful");
+                </script>
+                ';
         }
     }
     if ($data == 'test') {
@@ -89,7 +75,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Name <span class="required">*</span></label>
-                                                    <input type="text" class="wp-form-control wpcf7-text" name="testname" required>
+                                                    <input type="text" class="wp-form-control wpcf7-text" name="testname" required value="<?= $_POST['testname'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -97,14 +83,14 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Fees <span class="required">*</span></label>
-                                                    <input type="number" class="wp-form-control wpcf7-text" name="testfee" required>
+                                                    <input type="number" class="wp-form-control wpcf7-text" name="testfee" required value="<?= $_POST['testfee'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
                                             <div class="row">
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
-                                                    <button class="wpcf7-submit button--itzel" name="btn" type="submit">
+                                                    <button class="wpcf7-submit button--itzel" name="ok" type="submit">
                                                         <i class="button__icon fa fa-share"></i><span>Add</span>
                                                     </button>
                                                 </div>
@@ -140,12 +126,12 @@ include('src/functions.php');
                                                 <div class="col-lg-4 col-md-4 col-sm-6">
                                                     <label class="control-label">First name <span class="required">*</span>
                                                     </label>
-                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="First name" name="fname" required pattern="[A-Za-z-0-9]+">
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="First name" name="fname" required pattern="[A-Za-z-0-9]+" value="<?= $_POST['fname'] ?>">
                                                 </div>
                                                 <div class="col-lg-4 col-md-4 col-sm-6">
                                                     <label class="control-label">Last name <span class="required">*</span>
                                                     </label>
-                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Last name" name="lname" required pattern="[A-Za-z-0-9]+">
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Last name" name="lname" required pattern="[A-Za-z-0-9]+" value="<?= $_POST['lname'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -153,7 +139,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Email <span class="required">*</span></label>
-                                                    <input type="email" class="wp-form-control wpcf7-text" placeholder="Email address" name="mail" required>
+                                                    <input type="email" class="wp-form-control wpcf7-text" placeholder="Email address" name="mail" required value="<?= $_POST['mail'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -161,7 +147,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Date of Birth <span class="required">*</span></label>
-                                                    <input type="date" class="wp-form-control wpcf7-text" placeholder="dd/mm/yy" max="<?= date("Y-m-d") ?>" name="dob" required>
+                                                    <input type="date" class="wp-form-control wpcf7-text" placeholder="dd/mm/yy" max="<?= date("Y-m-d") ?>" name="dob" required value="<?= $_POST['dob'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -170,7 +156,7 @@ include('src/functions.php');
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Gender <span class="required">*</span></label>
                                                     <select class="wp-form-control wpcf7-text" name="gnd" required>
-                                                        <option value="">Select</option>
+                                                        <option value="<?= $_POST['gnd'] ?>"><?= $_POST['gnd'] ?></option>
                                                         <option value="Male">Male</option>
                                                         <option value="Female">Female</option>
                                                     </select>
@@ -181,7 +167,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Address <span class="required">*</span></label>
-                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Address" name="addr" required>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Address" name="addr" required value="<?= $_POST['addr'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -189,7 +175,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Phone <span class="required">*</span></label>
-                                                    <input type="number" class="wp-form-control wpcf7-text" placeholder="Phone No" name="phno" required>
+                                                    <input type="number" class="wp-form-control wpcf7-text" placeholder="Phone No" name="phno" required value="<?= $_POST['phno'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -197,7 +183,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Password <span class="required">*</span></label>
-                                                    <input type="password" class="wp-form-control wpcf7-text" placeholder="Password" name="pwd" required>
+                                                    <input type="password" class="wp-form-control wpcf7-text" placeholder="Password" name="pwd" required value="<?= $_POST['pwd'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -205,7 +191,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Fees <span class="required">*</span></label>
-                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Fees" name="fee" required>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Fees" name="fee" required value="<?= $_POST['fee'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
@@ -213,7 +199,7 @@ include('src/functions.php');
                                                 <div class="col-lg-2 col-md-2"></div>
                                                 <div class="col-lg-8 col-md-8 col-sm-6">
                                                     <label class="control-label">Category <span class="required">*</span></label>
-                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Category" name="category" required>
+                                                    <input type="text" class="wp-form-control wpcf7-text" placeholder="Category" name="category" required value="<?= $_POST['category'] ?>">
                                                 </div>
                                                 <div class="col-lg-2 col-md-2"></div>
                                             </div>
