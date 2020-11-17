@@ -23,7 +23,7 @@ include('src/config.php');
 
     $id = $_SESSION['log']['Id'];
     if ($_SESSION['log1'] == "client") {
-        ?>
+    ?>
         <section id="service">
             <div class="container">
                 <div class="row">
@@ -49,12 +49,12 @@ include('src/config.php');
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    $sql = mysqli_query($con, "SELECT * FROM test_appointment WHERE Users_id='$id' ");
-                                                    while ($row = mysqli_fetch_array($sql)) {
-                                                        $test = $row['Test_id'];
-                                                        $sql2 = mysqli_query($con, "SELECT * FROM test WHERE id='$test' ");
-                                                        $row2 = mysqli_fetch_array($sql2);
-                                                        ?>
+                                                $sql = mysqli_query($con, "SELECT * FROM test_appointment WHERE Users_id='$id' ");
+                                                while ($row = mysqli_fetch_array($sql)) {
+                                                    $test = $row['Test_id'];
+                                                    $sql2 = mysqli_query($con, "SELECT * FROM test WHERE id='$test' ");
+                                                    $row2 = mysqli_fetch_array($sql2);
+                                                ?>
                                                     <tr>
                                                         <th scope="row"><?= $row2['test_name'] ?></th>
                                                         <td><?= $row['Test_date'] ?></td>
@@ -63,8 +63,8 @@ include('src/config.php');
                                                         <td><a href="deleteapp.php?data=test&action=delete&id=<?= $row['Id']; ?>">Delete Appointment</a></td>
                                                     </tr>
                                                 <?php
-                                                    }
-                                                    ?>
+                                                }
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -101,38 +101,38 @@ include('src/config.php');
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    $sql = mysqli_query($con, "SELECT * FROM doctor_app WHERE Users_id='$id' ");
-                                                    while ($row = mysqli_fetch_array($sql)) {
-                                                        $doc = $row['Doctor_id'];
-                                                        $sql2 = mysqli_query($con, "SELECT * FROM doctor WHERE id='$doc' ");
-                                                        $row2 = mysqli_fetch_array($sql2);
-                                                        $sts = $row['Status'];
-                                                        ?>
+                                                $sql = mysqli_query($con, "SELECT * FROM doctor_app WHERE Users_id='$id' ");
+                                                while ($row = mysqli_fetch_array($sql)) {
+                                                    $doc = $row['Doctor_id'];
+                                                    $sql2 = mysqli_query($con, "SELECT * FROM doctor WHERE id='$doc' ");
+                                                    $row2 = mysqli_fetch_array($sql2);
+                                                    $sts = $row['Status'];
+                                                ?>
                                                     <tr>
                                                         <th scope="row"><?= $row2['Name'] ?></th>
                                                         <td><?= $row['App_date'] ?></td>
                                                         <td><?= $row['App_time'] ?></td>
                                                         <?php
-                                                                if ($sts == "Rejected") {
-                                                                    ?>
+                                                        if ($sts == "Rejected") {
+                                                        ?>
                                                             <td>Rejected by Doctor</td>
                                                             <td>
                                                                 <a href="deleteapp.php?data=doctor&action=delete&id=<?= $row['Id']; ?>">Delete Appointment</a>
                                                             </td>
                                                         <?php
-                                                                } else {
-                                                                    ?>
+                                                        } else {
+                                                        ?>
                                                             <td><a href="<?= $row['Report'] ?>" target="_blank">Download</a></td>
                                                             <td>
                                                                 <a href="deleteapp.php?data=doctor&action=delete&id=<?= $row['Id']; ?>">Delete Appointment</a>
                                                             </td>
                                                         <?php
-                                                                }
-                                                                ?>
+                                                        }
+                                                        ?>
                                                     </tr>
                                                 <?php
-                                                    }
-                                                    ?>
+                                                }
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -147,7 +147,7 @@ include('src/config.php');
     } else if ($_SESSION['log1'] == "doctor") {
         $id = $_SESSION['log']['Id'];
         $status = "Rejected";
-        ?>
+    ?>
         <section id="service">
             <div class="container">
                 <div class="row">
@@ -172,13 +172,13 @@ include('src/config.php');
                                             </thead>
                                             <tbody>
                                                 <?php
-                                                    $sql = mysqli_query($con, "SELECT * FROM doctor_app WHERE Doctor_id='$id' and Status!='$status' ");
-                                                    while ($row = mysqli_fetch_array($sql)) {
-                                                        $sts = $row['Status'];
-                                                        $user = $row['Users_id'];
-                                                        $sql2 = mysqli_query($con, "SELECT * FROM client WHERE Id='$user' ");
-                                                        $row2 = mysqli_fetch_array($sql2);
-                                                        ?>
+                                                $sql = mysqli_query($con, "SELECT * FROM doctor_app WHERE Doctor_id='$id' and Status!='$status' ");
+                                                while ($row = mysqli_fetch_array($sql)) {
+                                                    $sts = $row['Status'];
+                                                    $user = $row['Users_id'];
+                                                    $sql2 = mysqli_query($con, "SELECT * FROM client WHERE Id='$user' ");
+                                                    $row2 = mysqli_fetch_array($sql2);
+                                                ?>
                                                     <tr>
                                                         <th scope="row"><?= $row2['Name'] ?></th>
                                                         <td><?= $row['App_date'] ?></td>
@@ -186,8 +186,8 @@ include('src/config.php');
                                                         <td><a href="deleteapp.php?data=doctor&action=reject&id=<?= $row['Id']; ?>">Decline</a></td>
                                                     </tr>
                                                 <?php
-                                                    }
-                                                    ?>
+                                                }
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
