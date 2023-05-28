@@ -45,23 +45,23 @@
                         </ul>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-3 col-sm-3" style="margin-left: 12%>
-          <div class=" single-footer-widget ">
-                <div class=" section-heading">
-                    <h2>Contact Info</h2>
-                    <div class="line"></div>
+                <div class="col-lg-3 col-md-3 col-sm-3">
+                    <div class=" single-footer-widget ">
+                        <div class=" section-heading">
+                            <h2>Contact Info</h2>
+                            <div class="line"></div>
+                        </div>
+                        <p>Feel free to contact us any moment using any of the details provided below.</p>
+                        <address class="contact-info">
+                            <p><span class="fa fa-home"></span>VIT University
+                                Vellore, TN 632014, <i>India</i></p>
+                            <p><span class="fa fa-phone"></span>9830768030</p>
+                            <p><span class="fa fa-envelope"></span>piyush.bhutoria98@gmail.com</p>
+                        </address>
+                    </div>
                 </div>
-                <p>Feel free to contact us any moment using any of the details provided below.</p>
-                <address class="contact-info">
-                    <p><span class="fa fa-home"></span>VIT University
-                        Vellore, TN 632014, <i>India</i></p>
-                    <p><span class="fa fa-phone"></span>9830768030</p>
-                    <p><span class="fa fa-envelope"></span>piyush.bhutoria98@gmail.com</p>
-                </address>
             </div>
         </div>
-    </div>
-    </div>
     </div>
     <!-- Start Footer Middle -->
     <div class="footer-middle">

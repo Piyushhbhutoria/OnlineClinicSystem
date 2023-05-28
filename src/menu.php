@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['log']) == "") {
-    ?>
+?>
     <li><a href="index.php">Home</a></li>
     <li><a href="features.php">Features</a></li>
     <li><a href="aboutUs.php">About Us</a></li>
@@ -12,7 +12,7 @@ if (isset($_SESSION['log']) == "") {
     <li><a href="contact.php">Contact</a></li>
 <?php
 } else if ($_SESSION['log1'] == "client") {
-    ?>
+?>
     <li><a href="index.php">Home</a></li>
     <li><a href="features.php">Features</a></li>
     <li><a href="aboutUs.php">About Us</a></li>
@@ -30,7 +30,7 @@ if (isset($_SESSION['log']) == "") {
     <li><a href="contact.php">Contact</a></li>
 <?php
 } else if ($_SESSION['log1'] == "admin") {
-    ?>
+?>
     <li><a href="index.php">Home</a></li>
     <li><a href="update.php">Update</a></li>
     <li><a href="upload.php">Upload</a></li>
@@ -39,7 +39,7 @@ if (isset($_SESSION['log']) == "") {
     <li><a href="logout.php">Log out</a></li>
 <?php
 } else if ($_SESSION['log1'] == "doctor") {
-    ?>
+?>
     <li><a href="index.php">Home</a></li>
     <li><a href="appointments.php">My Appointments</a></li>
     <li class="dropdown">

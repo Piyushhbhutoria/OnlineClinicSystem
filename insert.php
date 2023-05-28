@@ -56,7 +56,7 @@ include('src/functions.php');
         }
     }
     if ($data == 'test') {
-        ?>
+    ?>
         <section id="service">
             <div class="container">
                 <div class="row">
@@ -106,7 +106,7 @@ include('src/functions.php');
         </section>
     <?php
     } else if ($data == 'doctor') {
-        ?>
+    ?>
         <section id="service">
             <div class="container">
                 <div class="row">

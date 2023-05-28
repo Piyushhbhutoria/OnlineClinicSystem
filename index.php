@@ -75,7 +75,7 @@
                 }
             }
         }
-        ?>
+    ?>
         <section id="topFeature">
             <div class="row">
                 <!-- Start Single Top Feature -->

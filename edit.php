@@ -65,7 +65,7 @@ include('src/functions.php');
     if ($data == 'test') {
         $res = mysqli_query($con, "SELECT * FROM test WHERE id = '$id' ");
         $row = mysqli_fetch_array($res);
-        ?>
+    ?>
         <section id="service">
             <div class="container">
                 <div class="row">
@@ -117,7 +117,7 @@ include('src/functions.php');
     } else if ($data == 'doctor') {
         $res = mysqli_query($con, "SELECT * FROM doctor WHERE id = '$id' ");
         $row = mysqli_fetch_array($res);
-        ?>
+    ?>
         <section id="service">
             <div class="container">
                 <div class="row">

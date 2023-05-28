@@ -42,7 +42,7 @@ include('src/config.php');
                                             <?php
                                             $sql = mysqli_query($con, "SELECT * FROM test");
                                             while ($row = mysqli_fetch_array($sql)) {
-                                                ?>
+                                            ?>
                                                 <tr>
                                                     <th scope="row"><?= $row['test_name'] ?></th>
                                                     <td><?= $row['test_cost'] ?></td>

@@ -49,7 +49,7 @@ include('src/functions.php');
                                                 $test = $row['id'];
                                                 $count = mysqli_query($con, "SELECT COUNT(Test_id) FROM test_appointment WHERE Test_id='$test' ");
                                                 $row2 = mysqli_fetch_array($count)
-                                                ?>
+                                            ?>
                                                 <tr>
                                                     <th scope="row"><?= $row['test_name']; ?></th>
                                                     <td><?= $row2[0] ?></td>

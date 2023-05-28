@@ -51,7 +51,7 @@ include('src/functions.php');
                                                 $test = $row['Test_id'];
                                                 $sql2 = mysqli_query($con, "SELECT * FROM test WHERE id='$test' ");
                                                 $row2 = mysqli_fetch_array($sql2);
-                                                ?>
+                                            ?>
                                                 <tr>
                                                     <th scope="row"><?= $row2['test_name'] ?></th>
                                                     <td><?= $row['Test_date'] ?></td>
@@ -105,7 +105,7 @@ include('src/functions.php');
                                                 $user = $row['Users_id'];
                                                 $sql3 = mysqli_query($con, "SELECT * FROM client WHERE Id='$user' ");
                                                 $row3 = mysqli_fetch_array($sql3);
-                                                ?>
+                                            ?>
                                                 <tr>
                                                     <th scope="row"><?= $row2['Name'] ?></th>
                                                     <td><?= $row3['Name'] ?></td>
