@@ -2,33 +2,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title>SPA Pathcare : About Us</title>
-    <?php include('src/head.php') ?>
-</head>
+	<head>
+		<title>SPA Pathcare : About Us</title>
+		<?php include('src/head.php') ?>
+	</head>
 
-<body>
-    
-    <?php include('src/preload.php') ?>
-    <!--=========== BEGIN HEADER SECTION ================-->
-    <?php include('src/header.php') ?>
-    <!--=========== END HEADER SECTION ================-->
+	<body>
 
-    <?php echo youAreHere("About Us") ?>
+		<?php include('src/preload.php') ?>
+		<!--=========== BEGIN HEADER SECTION ================-->
+		<?php include('src/header.php') ?>
+		<!--=========== END HEADER SECTION ================-->
 
-    <!--=========== BEGAIN Doctors SECTION ================-->
-    <?php include('src/meet_our_doc.php') ?>
-    <!--=========== End Doctors SECTION ================-->
+		<?= youAreHere("About Us") ?>
 
-    <!--=========== BEGAIN Counter SECTION ================-->
-    <?php include('src/counter.php') ?>
-    <!--=========== End Counter SECTION ================-->
+		<!--=========== BEGAIN Doctors SECTION ================-->
+		<?php include('src/meet_our_doc.php') ?>
+		<!--=========== End Doctors SECTION ================-->
 
-    <!--=========== Start Footer SECTION ================-->
-    <?php include('src/footer.php') ?>
-    <!--=========== End Footer SECTION ================-->
+		<!--=========== BEGAIN Counter SECTION ================-->
+		<?php include('src/counter.php') ?>
+		<!--=========== End Counter SECTION ================-->
 
-    <?php include('src/incfooter.php') ?>
-</body>
+		<!--=========== Start Footer SECTION ================-->
+		<?php include('src/footer.php') ?>
+		<!--=========== End Footer SECTION ================-->
+
+		<?php include('src/incfooter.php') ?>
+	</body>
 
 </html>
