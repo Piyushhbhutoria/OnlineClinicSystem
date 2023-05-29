@@ -40,8 +40,8 @@ include('src/session_check.php');
 				alert_and_redirect("File Size Exceeded!!!", "upload.php");
 			}
 			/*echo "file type is ".$file_type.'<br>';
-					 echo "file size is ".$file_size.'<br>';
-					 echo "file orig name is ".$file_o_name.'<br>';*/
+								 echo "file size is ".$file_size.'<br>';
+								 echo "file orig name is ".$file_o_name.'<br>';*/
 			if ($file_type == "application/pdf") {
 				#after the file gets validated now lets upload
 				#lets create a server path before uploading
@@ -56,7 +56,7 @@ include('src/session_check.php');
 				$upload = move_uploaded_file($_FILES['img']['tmp_name'], $server_path) or die($_FILES['img']['error']);
 				if ($upload) {
 					#save data
-					$saveData = mysqli_query($con, "UPDATE doctor_app SET Report='$server_path' WHERE id='$id' ") or die(mysqli_error($con));
+					$saveData = mysqli_query($con, "UPDATE doctor_app SET report='$server_path' WHERE id='$id' ") or die(mysqli_error($con));
 					if ($saveData) {
 						alert_and_redirect("Uploaded Sucessfully", "upload.php");
 					}
@@ -83,7 +83,7 @@ include('src/session_check.php');
 											<div class="row">
 												<div class="col-lg-2 col-md-2"></div>
 												<div class="col-lg-8 col-md-8 col-sm-6">
-													<label class="control-label">name <span class="required">*</span></label>
+													<label class="control-label">Name <span class="required">*</span></label>
 													<input type="text" class="wp-form-control wpcf7-text" name="file_name" required>
 												</div>
 												<div class="col-lg-2 col-md-2"></div>
