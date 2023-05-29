@@ -1,9 +1,5 @@
 <?php
-if (!isset($_SESSION['log']) || $_SESSION['log'] == '') {
-  echo '
-    <script>
-      alert("Login first!");
-      window.location.href = "index.php";
-    </script>
-    ';
+include('/functions.php');
+if (empty($_SESSION['user_data']) == true) {
+  alert_and_redirect("Login first!", "index.php");
 }
